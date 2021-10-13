@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="" />
+    <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/LoginForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Auth/RegisterForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Common/LanguageSelection.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Common/LoadingSpinner.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Game/GameCalendar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Game/GameForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/auth.constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/datetime.constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/game.constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/lang.constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/storage.constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/http.exceptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factories/game.factories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/AppLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/Menu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/game.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/i18n.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/api.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/game.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/storage.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/lang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Auth/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Auth/Logout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Auth/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Game/GameCreate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +60,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,13 +82,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/stores" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components/Auth" />
+      <recent name="$PROJECT_DIR$/src/views/Auth" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.lint">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -42,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.serve" />
       </list>
     </recent_temporary>
@@ -56,7 +138,12 @@
       <updated>1633730162442</updated>
       <workItem from="1633730163486" duration="371000" />
       <workItem from="1633769000101" duration="23000" />
-      <workItem from="1633781775267" duration="4457000" />
+      <workItem from="1633781775267" duration="20407000" />
+      <workItem from="1633862502246" duration="23436000" />
+      <workItem from="1633973999873" duration="25281000" />
+      <workItem from="1634055785681" duration="370000" />
+      <workItem from="1634067665678" duration="7122000" />
+      <workItem from="1634140264422" duration="2633000" />
     </task>
     <servers />
   </component>
@@ -64,21 +151,51 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="543" key="GridCell.Tab.0.bottom" timestamp="1633783400379">
+    <state x="823" y="394" key="#ESLint" timestamp="1633789414588">
       <screen x="0" y="23" width="1920" height="944" />
     </state>
-    <state width="1878" height="543" key="GridCell.Tab.0.bottom/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633783400379" />
-    <state width="1878" height="543" key="GridCell.Tab.0.center" timestamp="1633783400379">
+    <state x="823" y="394" key="#ESLint/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633789414588" />
+    <state x="683" y="304" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1633898914178">
       <screen x="0" y="23" width="1920" height="944" />
     </state>
-    <state width="1878" height="543" key="GridCell.Tab.0.center/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633783400379" />
-    <state width="1878" height="543" key="GridCell.Tab.0.left" timestamp="1633783400378">
+    <state x="683" y="304" key="#com.intellij.fileTypes.FileTypeChooser/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633898914178" />
+    <state width="1930" height="58" key="GridCell.Tab.0.bottom" timestamp="1633856064113">
       <screen x="0" y="23" width="1920" height="944" />
     </state>
-    <state width="1878" height="543" key="GridCell.Tab.0.left/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633783400378" />
-    <state width="1878" height="543" key="GridCell.Tab.0.right" timestamp="1633783400379">
+    <state width="1930" height="58" key="GridCell.Tab.0.bottom/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064113" />
+    <state width="1930" height="58" key="GridCell.Tab.0.center" timestamp="1633856064112">
       <screen x="0" y="23" width="1920" height="944" />
     </state>
-    <state width="1878" height="543" key="GridCell.Tab.0.right/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633783400379" />
+    <state width="1930" height="58" key="GridCell.Tab.0.center/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064112" />
+    <state width="1930" height="58" key="GridCell.Tab.0.left" timestamp="1633856064112">
+      <screen x="0" y="23" width="1920" height="944" />
+    </state>
+    <state width="1930" height="58" key="GridCell.Tab.0.left/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064112" />
+    <state width="1930" height="58" key="GridCell.Tab.0.right" timestamp="1633856064113">
+      <screen x="0" y="23" width="1920" height="944" />
+    </state>
+    <state width="1930" height="58" key="GridCell.Tab.0.right/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064113" />
+    <state x="469" y="134" key="SettingsEditor" timestamp="1633789307848">
+      <screen x="0" y="23" width="1920" height="944" />
+    </state>
+    <state x="469" y="134" key="SettingsEditor/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633789307848" />
+    <state x="661" y="250" width="598" height="490" key="find.popup" timestamp="1634142068699">
+      <screen x="0" y="23" width="1920" height="944" />
+    </state>
+    <state x="661" y="250" width="598" height="490" key="find.popup/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634142068699" />
+    <state x="660" y="253" width="598" height="497" key="find.popup/-1440.23.1440.877/0.23.1920.956@0.23.1920.956" timestamp="1633881035508" />
+    <state x="660" y="254" width="598" height="500" key="find.popup/-1440.23.1440.877/0.23.1920.960@0.23.1920.960" timestamp="1633879850416" />
+    <state x="496" y="213" width="568" height="490" key="find.popup/0.23.1440.792@0.23.1440.792" timestamp="1634074216911" />
+    <state x="790" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1634032518825">
+      <screen x="0" y="23" width="1920" height="944" />
+    </state>
+    <state x="790" y="276" key="refactoring.ChangeSignatureDialog/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634032518825" />
+    <state x="625" y="50" width="670" height="676" key="search.everywhere.popup" timestamp="1634069941122">
+      <screen x="0" y="23" width="1440" height="783" />
+    </state>
+    <state x="625" y="230" width="670" height="676" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633988555802" />
+    <state x="625" y="231" width="670" height="679" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.947@0.23.1920.947" timestamp="1633890266677" />
+    <state x="625" y="233" width="670" height="685" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.956@0.23.1920.956" timestamp="1633882887353" />
+    <state x="625" y="50" width="670" height="676" key="search.everywhere.popup/0.23.1440.783@0.23.1440.783" timestamp="1634069941122" />
   </component>
 </project>

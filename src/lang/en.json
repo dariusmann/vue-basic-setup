@@ -1,0 +1,82 @@
+{
+  "text": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "password": "Password",
+    "email": "E-Mail",
+    "create": "Create",
+    "address": "Address",
+    "language": "Language",
+    "play": "Play",
+    "close": "Close",
+    "today": "Today"
+  },
+  "errorMessage": {
+    "required": "Required",
+    "emailNotValid": "E-mail must be valid",
+    "minCharacters": "Min {min} characters",
+    "unexpectedError": "An unexpected error occurred, please try again later"
+  },
+  "hint": {
+    "minAmountChars": "At least {amount} characters"
+  },
+  "component": {
+    "loginForm": {
+      "message": {
+        "loginSuccess": "Login was successful",
+        "emailNotFound": "Email not found",
+        "passwordNotValid": "Password not valid"
+      }
+    },
+    "registerForm": {
+      "message": {
+        "registerSuccess": "Register was successful",
+        "loginCallToAction": "Login now",
+        "userAlreadyExists": "User with this email already exists"
+      }
+    },
+    "createGameForm": {
+      "label": {
+        "playerRange": "Min and max amount of players",
+        "startDatetime": "Select game start",
+        "endDatetime": "Select game end"
+      },
+      "validationMessage": {
+        "startDatetimeRequired": "Start date time is required",
+        "endDatetimeRequired": "End date time is required",
+        "startBeforeEndDateTime": "Start is before end date time or both are equal"
+      }
+    },
+    "menu": {
+      "linkText": {
+        "createGame": "Create game"
+      }
+    }
+  },
+  "view": {
+    "game": {
+      "createGame": {
+        "header": "Create game",
+        "message": {
+          "createGameSuccess": "Game was successfully created"
+        },
+        "gameFinder": {
+          "header": "Find you game",
+          "nextFourDays": "Next 4 days"
+        }
+      }
+    },
+    "auth": {
+      "register": {
+        "header": "Register"
+      },
+      "login": {
+        "header": "Login"
+      },
+      "logout": {
+        "header": "Logout"
+      }
+    }
+  }
+}

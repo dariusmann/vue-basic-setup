@@ -1,0 +1,82 @@
+{
+  "text": {
+    "login": "Логін",
+    "logout": "Вийти",
+    "register": "Зареєструватись",
+    "password": "Пароль",
+    "email": "E-Mail",
+    "create": "Створити",
+    "address": "Адреса",
+    "language": "Мова",
+    "play": "Грати",
+    "close": "Закрити",
+    "today": "сьогодні"
+  },
+  "errorMessage": {
+    "required": "вимагається",
+    "emailNotValid": "E-Mail має бути дійсною",
+    "minCharacters": "Мінімум {min} символів",
+    "unexpectedError": "Сталася несподівана помилка. Повторіть спробу пізніше"
+  },
+  "hint": {
+    "minAmountChars": "Принаймні {amount} символи"
+  },
+  "component": {
+    "loginForm": {
+      "message": {
+        "loginSuccess": "Вхід пройшов успішно",
+        "emailNotFound": "E-Mail не знайдено",
+        "passwordNotValid": "Пароль недійсний"
+      }
+    },
+    "registerForm": {
+      "message": {
+        "registerSuccess": "Реєстрація пройшла успішно",
+        "loginCallToAction": "Увійдіть зараз",
+        "userAlreadyExists": "Користувач із цією електронною адресою вже існує"
+      }
+    },
+    "createGameForm": {
+      "label": {
+        "playerRange": "Мінімальна та максимальна кількість гравців",
+        "startDatetime": "Виберіть початок гри",
+        "endDatetime": "Виберіть кінець гри"
+      },
+      "validationMessage": {
+        "startDatetimeRequired": "Потрібен час початку дати",
+        "endDatetimeRequired": "Потрібно вказати час завершення",
+        "startBeforeEndDateTime": "Початок - до дати закінчення або обидва рівні"
+      }
+    },
+    "menu": {
+      "linkText": {
+        "createGame": "Створити гру"
+      }
+    }
+  },
+  "view": {
+    "game": {
+      "createGame": {
+        "header": "Створити гру",
+        "message": {
+          "createGameSuccess": "Гра успішно створена"
+        }
+      },
+      "gameFinder": {
+        "header": "Гра Знайди тебе",
+        "nextFourDays": "Наступні 4 дні"
+      }
+    },
+    "auth": {
+      "register": {
+        "header": "Зареєструватись"
+      },
+      "login": {
+        "header": "Увійти"
+      },
+      "logout": {
+        "header": "Вийти"
+      }
+    }
+  }
+}

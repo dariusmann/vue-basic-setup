@@ -1,0 +1,82 @@
+{
+  "text": {
+    "login": "Логин",
+    "logout": "Выход",
+    "register": "Зарегистрироваться",
+    "password": "Пароль",
+    "email": "E-Mail",
+    "create": "Создать",
+    "address": "Адрес",
+    "language": "Язык",
+    "play": "Играть",
+    "close": "Закрыть",
+    "today": "сегодня"
+  },
+  "errorMessage": {
+    "required": "Требуется",
+    "emailNotValid": "E-Mail должна быть действительной",
+    "minCharacters": "Минимум {min} символов",
+    "unexpectedError": "Произошла непредвиденная ошибка, пожалуйста, повторите попытку позже"
+  },
+  "hint": {
+    "minAmountChars": "Не менее {количество} символов"
+  },
+  "component": {
+    "loginForm": {
+      "message": {
+        "loginSuccess": "Вход в систему был успешным",
+        "emailNotFound": "E-Mail не найдена",
+        "passwordNotValid": "Пароль не действителен"
+      }
+    },
+    "registerForm": {
+      "message": {
+        "registerSuccess": "Регистрация прошла успешно",
+        "loginCallToAction": "Войти сейчас",
+        "userAlreadyExists": "Пользователь с таким E-Mail адресом уже существует"
+      }
+    },
+    "createGameForm": {
+      "label": {
+        "playerRange": "Минимальное и максимальное количество игроков",
+        "startDatetime": "Выберите начало игры",
+        "endDatetime": "Выберите конец игры"
+      },
+      "validationMessage": {
+        "startDatetimeRequired": "Требуется время начальной даты",
+        "endDatetimeRequired": "End date time is required",
+        "startBeforeEndDateTime": "Начало раньше времени окончания даты или обе даты равны"
+      }
+    },
+    "menu": {
+      "linkText": {
+        "createGame": "Создать игру"
+      }
+    }
+  },
+  "view": {
+    "game": {
+      "createGame": {
+        "header": "Создать игру",
+        "message": {
+          "createGameSuccess": "Игра была успешно создана"
+        },
+        "gameFinder": {
+          "header": "Найдите свою игру",
+          "nextFourDays": "Следующие 4 дня"
+        }
+      },
+      "auth": {
+        "register": {
+          "header": "Зарегистрироваться"
+        },
+        "login": {
+          "header": "Вход"
+        },
+        "logout": {
+          "header": "Выход"
+        }
+      }
+    }
+  }
+}
