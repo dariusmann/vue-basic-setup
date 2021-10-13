@@ -4,55 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env.local" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Auth/LoginForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Auth/RegisterForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common/LanguageSelection.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Common/LoadingSpinner.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Game/GameCalendar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Game/GameForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/auth.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/datetime.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/game.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/lang.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/storage.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/http.exceptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factories/game.factories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/AppLayout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/Menu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/game.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugins/i18n.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/game.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/storage.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stores/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stores/lang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Auth/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Auth/Logout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Auth/Register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Game/GameCreate.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/About.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +95,7 @@
       <workItem from="1633973999873" duration="25281000" />
       <workItem from="1634055785681" duration="370000" />
       <workItem from="1634067665678" duration="7122000" />
-      <workItem from="1634140264422" duration="2633000" />
+      <workItem from="1634140264422" duration="2960000" />
     </task>
     <servers />
   </component>
