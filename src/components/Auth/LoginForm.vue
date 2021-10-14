@@ -101,8 +101,8 @@ export default {
       loading: false,
       valid: false,
       showPassword: false,
-      email: 'dsmanyp@gmail.com',
-      password: 'tomo122',
+      email: '',
+      password: '',
       showMessage: {
         successfulLogin: false,
         userNotFound: false,
