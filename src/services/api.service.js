@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { StatusCodes } from 'http-status-codes'
-import AuthService from '@/services/auth.service'
+import Store from '@/stores'
 
 const ApiService = {
   _authenticationInterceptor: null,
@@ -37,7 +37,7 @@ const ApiService = {
       },
       async (error) => {
         if (error.request.status === StatusCodes.FORBIDDEN) {
-          await AuthService.logoutUser()
+          Store.dispatch('auth/logout')
           throw error
         }
 

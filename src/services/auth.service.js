@@ -47,8 +47,16 @@ const AuthService = {
     }
   },
   logoutUser: async function () {
-    await Store.dispatch('auth/logout')
-    await Router.push('Login')
+    try {
+      const response = await ApiService.post('/logout')
+
+      if (response.status === StatusCodes.NO_CONTENT) {
+        await Store.dispatch('auth/logout')
+        await Router.push('Login')
+      }
+    } catch (error) {
+        throw new UnexpectedServerError(error.response.status, error.response.message)
+    }
   }
 }
 

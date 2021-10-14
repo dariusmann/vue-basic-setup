@@ -63,7 +63,8 @@
         },
         "gameFinder": {
           "header": "Найдите свою игру",
-          "nextFourDays": "Следующие 4 дня"
+          "nextFourDays": "Следующие 4 дня",
+          "calendarView": "Просмотр календаря"
         }
       },
       "auth": {
@@ -74,7 +75,10 @@
           "header": "Вход"
         },
         "logout": {
-          "header": "Выход"
+          "header": "Выход",
+          "message": {
+            "logoutSuccessful": "Выход из системы был успешным!"
+          }
         }
       }
     }

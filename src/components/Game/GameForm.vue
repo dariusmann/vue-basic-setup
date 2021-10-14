@@ -32,6 +32,8 @@
                 v-model="details.playersAmountRange"
                 :max="max"
                 :min="min"
+                color="teal"
+                track-color="teal lighten-4"
                 hide-details
                 class="align-center"
               >
@@ -70,7 +72,12 @@
                 :time-picker-props="timePickerProps"/>
             </v-col>
             <v-col cols="12" md="12">
-              <v-btn elevation="2" @click="this.submit">{{ $t('text.create') }}</v-btn>
+              <v-btn
+                color="teal"
+                elevation="2"
+                class="white--text"
+                @click="this.submit">{{ $t('text.create') }}
+              </v-btn>
             </v-col>
           </v-row>
         </v-container>

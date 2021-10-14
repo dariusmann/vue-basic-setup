@@ -64,7 +64,8 @@
       },
       "gameFinder": {
         "header": "Гра Знайди тебе",
-        "nextFourDays": "Наступні 4 дні"
+        "nextFourDays": "Наступні 4 дні",
+        "calendarView": "Перегляд календаря"
       }
     },
     "auth": {
@@ -75,7 +76,10 @@
         "header": "Увійти"
       },
       "logout": {
-        "header": "Вийти"
+        "header": "Вийти",
+        "message": {
+          "logoutSuccessful": "Вихід успішний!"
+        }
       }
     }
   }

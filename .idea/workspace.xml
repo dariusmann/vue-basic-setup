@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Game/GameForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/GameForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Auth/Logout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Auth/Logout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +109,8 @@
       <workItem from="1634055785681" duration="370000" />
       <workItem from="1634067665678" duration="7122000" />
       <workItem from="1634140264422" duration="3634000" />
+      <workItem from="1634197807249" duration="19000" />
+      <workItem from="1634230288881" duration="90000" />
     </task>
     <servers />
   </component>
@@ -131,13 +142,15 @@
       <screen x="0" y="23" width="1920" height="944" />
     </state>
     <state width="1930" height="58" key="GridCell.Tab.0.right/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064113" />
-    <state x="469" y="134" key="SettingsEditor" timestamp="1633789307848">
-      <screen x="0" y="23" width="1920" height="944" />
+    <state x="469" y="147" key="SettingsEditor" timestamp="1634161878545">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="469" y="147" key="SettingsEditor/-1440.23.1440.779/0.23.1920.1057@0.23.1920.1057" timestamp="1634161878545" />
     <state x="469" y="134" key="SettingsEditor/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633789307848" />
-    <state x="661" y="250" width="598" height="490" key="find.popup" timestamp="1634142068699">
-      <screen x="0" y="23" width="1920" height="944" />
+    <state x="661" y="277" width="598" height="549" key="find.popup" timestamp="1634161822104">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="661" y="277" width="598" height="549" key="find.popup/-1440.23.1440.779/0.23.1920.1057@0.23.1920.1057" timestamp="1634161822104" />
     <state x="661" y="250" width="598" height="490" key="find.popup/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634142068699" />
     <state x="660" y="253" width="598" height="497" key="find.popup/-1440.23.1440.877/0.23.1920.956@0.23.1920.956" timestamp="1633881035508" />
     <state x="660" y="254" width="598" height="500" key="find.popup/-1440.23.1440.877/0.23.1920.960@0.23.1920.960" timestamp="1633879850416" />
@@ -146,9 +159,10 @@
       <screen x="0" y="23" width="1920" height="944" />
     </state>
     <state x="790" y="276" key="refactoring.ChangeSignatureDialog/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634032518825" />
-    <state x="625" y="50" width="670" height="676" key="search.everywhere.popup" timestamp="1634069941122">
-      <screen x="0" y="23" width="1440" height="783" />
+    <state x="833" y="59" width="894" height="913" key="search.everywhere.popup" timestamp="1634163748925">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="833" y="59" width="894" height="913" key="search.everywhere.popup/-1440.23.1440.773/0.23.1920.1057@0.23.1920.1057" timestamp="1634163748925" />
     <state x="625" y="230" width="670" height="676" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633988555802" />
     <state x="625" y="231" width="670" height="679" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.947@0.23.1920.947" timestamp="1633890266677" />
     <state x="625" y="233" width="670" height="685" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.956@0.23.1920.956" timestamp="1633882887353" />

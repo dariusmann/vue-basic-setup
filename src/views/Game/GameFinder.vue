@@ -10,7 +10,7 @@
         <v-select
           v-model="calendarType"
           :items="calendarTypes"
-          :label="$t('text.language')"
+          :label="$t('view.game.gameFinder.calendarView')"
           item-text="label"
           item-value="value"
           @change="change"

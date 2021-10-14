@@ -60,11 +60,12 @@
         "header": "Create game",
         "message": {
           "createGameSuccess": "Game was successfully created"
-        },
-        "gameFinder": {
-          "header": "Find you game",
-          "nextFourDays": "Next 4 days"
         }
+      },
+      "gameFinder": {
+        "header": "Find you game",
+        "nextFourDays": "Next 4 days",
+        "calendarView": "Calendar view"
       }
     },
     "auth": {
@@ -75,7 +76,10 @@
         "header": "Login"
       },
       "logout": {
-        "header": "Logout"
+        "header": "Logout",
+        "message": {
+          "logoutSuccessful": "Logout was successful!"
+        }
       }
     }
   }
