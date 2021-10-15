@@ -4,7 +4,7 @@
     :items="items"
     item-text="flagCode"
     item-value="isoCode"
-    :label="$t('text.language')"
+    :label="null"
     @change="change"
     return-object
   >
@@ -12,7 +12,7 @@
       <country-flag :country='item.flagCode' size='normal'/>
     </template>
     <template v-slot:item="{ item }">
-      <country-flag :country='item.flagCode' size='normal'/>
+      <country-flag :country='item.flagCode' size='normal'/> <span>{{item.flagCode}}</span>
     </template>
   </v-select>
 </template>

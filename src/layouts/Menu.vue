@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="12" class="">
+      <v-col cols="12" md="12" class="tw-flex tw-space tw-justify-between">
         <div>
           <router-link to="/">Home</router-link>
           <router-link to="/games" v-show="isLoggedIn()">{{ $t('text.play') }}</router-link>
@@ -10,7 +10,7 @@
           <router-link to="/auth/login" v-show="!isLoggedIn()">{{ $t('text.login') }}</router-link>
           <router-link to="/auth/logout" v-show="isLoggedIn()">{{ $t('text.logout') }}</router-link>
         </div>
-        <div>
+        <div class="tw-w-20">
           <LanguageSelection :default-select="getLangSelect()"/>
         </div>
       </v-col>
