@@ -15,4 +15,5 @@ phpunit.dusk.xml
 /public/dist
 /public/build
 /public/mix-manifest.json
-.idea
+/.idea
+.workspace
