@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/GameForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/GameForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Auth/Logout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Auth/Logout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +131,10 @@
       <screen x="0" y="23" width="1920" height="944" />
     </state>
     <state width="1930" height="58" key="GridCell.Tab.0.right/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064113" />
+    <state x="531" y="114" key="RollbackChangesDialog" timestamp="1634244127545">
+      <screen x="0" y="23" width="1440" height="773" />
+    </state>
+    <state x="531" y="114" key="RollbackChangesDialog/0.23.1440.773@0.23.1440.773" timestamp="1634244127545" />
     <state x="469" y="147" key="SettingsEditor" timestamp="1634161878545">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
