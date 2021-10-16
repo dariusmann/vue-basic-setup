@@ -1,27 +1,45 @@
 <template>
   <v-container>
-    <h1>{{ $t('view.game.createGame.header') }}</h1>
-    <LoadingSpinner v-show="loading"/>
-    <v-alert
-      v-show="showMessage.createSuccess"
-      dense
-      outlined
-      prominent
-      text
-      type="success"
-    >
-      <div>{{ $t('view.game.createGame.message.createGameSuccess') }}!</div>
-    </v-alert>
-    <v-alert
-      v-show="showMessage.error"
-      dense
-      outlined
-      prominent
-      text
-      type="error"
-    >
-      <div>{{ errorMessage }}!</div>
-    </v-alert>
+    <v-row>
+      <v-col>
+        <LoadingSpinner v-show="loading"/>
+        <h1>{{ $t('view.game.createGame.header') }}</h1>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <v-alert
+          v-show="showMessage.createSuccess"
+          dense
+          outlined
+          prominent
+          text
+          type="success"
+        >
+          <div>{{ $t('view.game.createGame.message.createGameSuccess') }}!</div>
+        </v-alert>
+        <v-alert
+          v-show="showMessage.toManyGamesForUser"
+          dense
+          outlined
+          prominent
+          text
+          type="warning"
+        >
+          <div>{{ errorMessage }}!</div>
+        </v-alert>
+        <v-alert
+          v-show="showMessage.unexpectedError"
+          dense
+          outlined
+          prominent
+          text
+          type="error"
+        >
+          <div>{{ errorMessage }}!</div>
+        </v-alert>
+      </v-col>
+    </v-row>
     <CreateGameForm @send="create"/>
   </v-container>
 </template>
@@ -30,6 +48,7 @@
 import CreateGameForm from '@/components/Game/GameForm'
 import GameService from '@/services/game.service'
 import LoadingSpinner from '@/components/Common/LoadingSpinner'
+import { ToManyGameForUserException } from '@/exceptions/game.exceptions'
 
 export default {
   name: 'GameCreate',
@@ -39,7 +58,8 @@ export default {
       loading: false,
       showMessage: {
         createSuccess: false,
-        error: false
+        toManyGamesForUser: false,
+        unexpectedError: false
       },
       errorMessage: ''
     }
@@ -47,14 +67,22 @@ export default {
   methods: {
     async create (details) {
       this.loading = true
-      this.showMessage.error = false
+      this.showMessage.createSuccess = false
+      this.showMessage.toManyGamesForUser = false
+      this.showMessage.unexpectedError = false
+      this.errorMessage = ''
 
       try {
         await GameService.createGame(details)
         this.showMessage.createSuccess = true
       } catch (e) {
-        this.showMessage.error = true
-        this.errorMessage = e.message
+        if (e instanceof ToManyGameForUserException) {
+          this.showMessage.toManyGamesForUser = true
+          this.errorMessage = this.$i18n.t('view.game.createGame.message.toManyGamesForUser')
+        } else {
+          this.showMessage.unexpectedError = true
+          this.errorMessage = this.$i18n.t('errorMessage.unexpectedError')
+        }
       }
 
       this.loading = false

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import GameCalendar from '@/components/Game/GameCalendar'
+import GameCalendar from '@/components/Game/Finder/GameCalendar'
 import GameService from '@/services/game.service'
 import moment from 'moment'
 import { GameTypes } from '@/constants/game.constants'
@@ -70,8 +70,6 @@ export default {
         const to = moment().add(4, 'days')
 
         this.games = await GameService.readGames(GameTypes.Soccer, from, to)
-
-        console.log(this.games)
       }
     }
   }

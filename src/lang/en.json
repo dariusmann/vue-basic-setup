@@ -10,7 +10,11 @@
     "language": "Language",
     "play": "Play",
     "close": "Close",
-    "today": "Today"
+    "today": "Today",
+    "time": "Time",
+    "players": "Players",
+    "min": "min",
+    "max": "max"
   },
   "errorMessage": {
     "required": "Required",
@@ -59,7 +63,8 @@
       "createGame": {
         "header": "Create game",
         "message": {
-          "createGameSuccess": "Game was successfully created"
+          "createGameSuccess": "Game was successfully created",
+          "toManyGamesForUser": "You can only create a maximum of 3 games"
         }
       },
       "gameFinder": {
@@ -81,6 +86,18 @@
           "logoutSuccessful": "Logout was successful!"
         }
       }
+    },
+    "home": {
+      "header": "Welcome to this app!",
+      "findUpComingGames": {
+        "message": "Here you can find up coming soccer games in Kiev!",
+        "callToAction": "To take a look at up coming games over the next days click here..."
+      },
+      "publishOwnGames":  {
+        "message": "You can also announce games to find players!",
+        "callToAction": "To publish a game register here..."
+      },
+      "contact": "If you wanna contact me directly for feedback you can to this by writing me on Telegram nickname @dariusmann"
     }
   }
 }

@@ -45,7 +45,7 @@
           text
           type="error"
         >
-          <div>{{$t('component.errorMessage.unexpectedError')}}!</div>
+          <div>{{$t('errorMessage.unexpectedError')}}!</div>
         </v-alert>
       </v-col>
     </v-row>

@@ -41,7 +41,7 @@ const routes = [
   },
   {
     path: '/games',
-    name: 'GameCreate',
+    name: 'Games',
     component: () => import('../views/Game/GameFinder.vue'),
     meta: {
       layout: 'AppLayout'

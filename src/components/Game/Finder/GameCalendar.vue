@@ -5,42 +5,22 @@
       :events="getEvents()"
       @click:event="showEvent"
     />
-    <v-menu
-      v-model="selectedOpen"
-      :close-on-content-click="false"
-      :activator="selectedElement"
-      offset-x
-    >
-      <v-card
-        color="grey lighten-4"
-        min-width="350px"
-        flat
-      >
-        <v-toolbar dark>
-          <v-toolbar-title v-html="selectedEvent.name"></v-toolbar-title>
-          <v-spacer></v-spacer>
-        </v-toolbar>
-        <v-card-text>
-          <span v-html="selectedEvent.name"></span>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn
-            text
-            color="secondary"
-            @click="selectedOpen = false"
-          >
-            {{$t('text.close')}}
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-menu>
+    <CalendarEventCard
+      :selected-element="selectedElement"
+      :selected-event="selectedEvent"
+      :selected-open="cardOpen"
+      @close="closeEvent"
+    />
   </v-container>
 </template>
 
 <script>
 
+import CalendarEventCard from '@/components/Game/Finder/CalendarEventCard'
+
 export default {
   name: 'GameCalendar',
+  components: { CalendarEventCard },
   props: {
     games: {
       type: Array,
@@ -61,6 +41,11 @@ export default {
       selectedOpen: false
     }
   },
+  computed: {
+    cardOpen: function () {
+      return this.selectedOpen
+    }
+  },
   methods: {
     getEvents () {
       const events = []
@@ -69,8 +54,11 @@ export default {
         const game = this.games[key]
         events.push({
           name: game.address,
-          start: game.getStartFormatted(),
-          end: game.getEndFormatted()
+          start: game.getStartTimezone(),
+          end: game.getEndTimezone(),
+          address: game.address,
+          minPlayers: game.minPlayer,
+          maxPlayers: game.maxPlayer
         })
       }
 
@@ -93,6 +81,9 @@ export default {
       }
 
       nativeEvent.stopPropagation()
+    },
+    closeEvent () {
+      this.selectedOpen = false
     }
   }
 }

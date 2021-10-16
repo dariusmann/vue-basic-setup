@@ -1,12 +1,13 @@
 import ApiService from '@/services/api.service'
-import moment from 'moment'
 import DatetimeConstants from '@/constants/datetime.constants'
 import { StatusCodes } from 'http-status-codes'
 import { BadRequestException, UnexpectedServerError } from '@/exceptions/http.exceptions'
 import { GameDataFactory } from '@/factories/game.factories'
+import { ToManyGameForUserException } from '@/exceptions/game.exceptions'
+import { TimezoneHelper } from '@/helpers/datime.helpers'
 
 const GameService = {
-  createGame: async function (details) {
+   createGame: async function (details) {
     try {
       await ApiService.post('/games', {
         details: this.prepareGameData(details)
@@ -14,6 +15,9 @@ const GameService = {
     } catch (error) {
       if (error.response.status === StatusCodes.BAD_REQUEST) {
         throw new BadRequestException(error)
+      }
+      if (error.response.status === StatusCodes.CONFLICT) {
+        throw new ToManyGameForUserException(error)
       }
 
       throw error
@@ -41,16 +45,16 @@ const GameService = {
     }
   },
   prepareGameData: function (details) {
-    const startDatetime = moment(details.startDatetime)
-    const endDatetime = moment(details.endDatetime)
+    const startDatetime = TimezoneHelper.toUTC(details.startDatetime)
+    const endDatetime = TimezoneHelper.toUTC(details.endDatetime)
 
     return {
       type: details.type,
       address: details.address,
       min_player: details.playersAmountRange[0],
       max_player: details.playersAmountRange[1],
-      start_datetime: startDatetime.format(DatetimeConstants.DatetimeFormat),
-      end_datetime: endDatetime.format(DatetimeConstants.DatetimeFormat)
+      start_datetime: startDatetime,
+      end_datetime: endDatetime
     }
   }
 }

@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Timezone awareness
+https://stackoverflow.com/questions/40401543/get-timezone-from-users-browser-using-momenttimezone-js

@@ -2,9 +2,9 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="12" class="tw-flex tw-space tw-justify-between">
-        <div>
+        <div class="Menu">
           <router-link to="/">Home</router-link>
-          <router-link to="/games" v-show="isLoggedIn()">{{ $t('text.play') }}</router-link>
+          <router-link to="/games">{{ $t('text.play') }}</router-link>
           <router-link to="/games/create" v-show="isLoggedIn()">{{ $t('component.menu.linkText.createGame') }}</router-link>
           <router-link to="/auth/register" v-show="!isLoggedIn()">{{ $t('text.register') }}</router-link>
           <router-link to="/auth/login" v-show="!isLoggedIn()">{{ $t('text.login') }}</router-link>

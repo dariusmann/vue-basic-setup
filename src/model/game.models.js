@@ -1,5 +1,6 @@
-import moment from 'moment'
+import moment from 'moment-timezone'
 import DatetimeConstants from '@/constants/datetime.constants'
+import { TimezoneHelper } from '@/helpers/datime.helpers'
 
 class GameData {
   constructor (game) {
@@ -11,11 +12,19 @@ class GameData {
     this.endDatetime = game.details.end_datetime
   }
 
-  getStartFormatted () {
+  getStartTimezone () {
+    return TimezoneHelper.fromUTC(this.startDatetime)
+  }
+
+  getEndTimezone () {
+    return TimezoneHelper.fromUTC(this.endDatetime)
+  }
+
+  getStartUTC () {
     return moment(this.startDatetime).format(DatetimeConstants.DatetimeFormat)
   }
 
-  getEndFormatted () {
+  getEndUTC () {
     return moment(this.endDatetime).format(DatetimeConstants.DatetimeFormat)
   }
 }
