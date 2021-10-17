@@ -26,6 +26,21 @@
                 required
               ></v-text-field>
             </v-col>
+            <v-col cols="12" md="6">
+              <v-text-field label="You Telegram number" :rules="[rules.required]" required/>
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-datetime-picker
+                :label="$t('component.createGameForm.label.startDatetime')"
+                v-model="details.startDatetime"
+                :time-picker-props="timePickerProps"/>
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-datetime-picker
+                :label="$t('component.createGameForm.label.endDatetime')"
+                v-model="details.endDatetime"
+                :time-picker-props="timePickerProps"/>
+            </v-col>
             <v-col cols="12" md="12">
               <v-subheader>{{ $t('component.createGameForm.label.playerRange') }}</v-subheader>
               <v-range-slider
@@ -60,16 +75,16 @@
               </v-range-slider>
             </v-col>
             <v-col cols="12" md="6">
-              <v-datetime-picker
-                :label="$t('component.createGameForm.label.startDatetime')"
-                v-model="details.startDatetime"
-                :time-picker-props="timePickerProps"/>
+              <v-select
+                :items="gameFormats"
+                item-text="label"
+                item-value="value"
+                label="Format"
+                :rules="[rules.required]"
+              ></v-select>
             </v-col>
             <v-col cols="12" md="6">
-              <v-datetime-picker
-                :label="$t('component.createGameForm.label.endDatetime')"
-                v-model="details.endDatetime"
-                :time-picker-props="timePickerProps"/>
+              <v-textarea label="Comment" :hint="`District, Metro Station, Price...`"/>
             </v-col>
             <v-col cols="12" md="12">
               <v-btn
@@ -87,7 +102,7 @@
 </template>
 
 <script>
-import { GameTypes } from '@/constants/game.constants'
+import { GameFormat, GameTypes } from '@/constants/game.constants'
 import moment from 'moment'
 
 export default {
@@ -173,6 +188,32 @@ export default {
       this.validation.show = false
       this.validation.message = ''
       this.$refs.form.resetValidation()
+    }
+  },
+  computed: {
+    gameFormats () {
+      return [
+        {
+          label: '4x4',
+          vale: GameFormat.Format4x4
+        },
+        {
+          label: '5x5',
+          vale: GameFormat.Format5x5
+        },
+        {
+          label: '6x6',
+          vale: GameFormat.Format6x6
+        },
+        {
+          label: '8x8',
+          vale: GameFormat.Format8x8
+        },
+        {
+          label: '11x11',
+          vale: GameFormat.Format11x11
+        }
+      ]
     }
   }
 }
