@@ -16,19 +16,26 @@
       <v-card-text>
         <p>
           <a :href="addressLink" target="_blank" class="AddressLink">
-            <b class="tw-underline">{{ $t('text.address') }}:</b>
-            {{ selectedEvent.address }}
             <v-btn icon>
               <v-icon>mdi-map-marker</v-icon>
             </v-btn>
+            <b class="tw-underline">{{ $t('text.address') }}:</b>
+            {{ selectedEvent.address }}
           </a>
         </p>
         <p>
-          <b class="tw-underline">{{ $t('text.time') }}:</b>
-          {{ time }}
+          <v-btn icon>
+            <v-icon>mdi-forum</v-icon>
+          </v-btn>
+          <b class="tw-underline">{{ $t('text.telegram') }}:</b>
+          <a :href="telegramLink" class="AddressLink" target="_blank"> @{{contact}}</a>
+        </p>
+        <p>
           <v-btn icon>
             <v-icon>mdi-clock-outline</v-icon>
           </v-btn>
+          <b class="tw-underline">{{ $t('text.time') }}:</b>
+          {{ time }}
         </p>
         <p>
           <b class="tw-underline">{{ $t('text.format') }}:</b>
@@ -151,13 +158,16 @@ export default {
       return this.resolvePlayerLevelLabel(this.selectedEvent.playerLevel)
     },
     telegramLink () {
-      return ''
+      return 'https://t.me/' + this.selectedEvent.contact
     },
     fieldType () {
       return this.resolveFieldTypeLabel(this.selectedEvent.fieldType)
     },
     comment () {
       return this.selectedEvent.comment
+    },
+    contact () {
+      return this.selectedEvent.contact
     },
     hasShower () {
       return this.selectedEvent.shower

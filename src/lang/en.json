@@ -24,7 +24,8 @@
     "dressingRoom": "Dressing room",
     "parking": "Parking",
     "locker": "Locker",
-    "shower": "Shower"
+    "shower": "Shower",
+    "telegram": "Telegram"
   },
   "errorMessage": {
     "required": "Required",
@@ -63,7 +64,7 @@
         "locker": "Locker",
         "fieldType": "Field type",
         "comment": "Comment",
-        "contact": "You telegram contact"
+        "contact": "You Telegram nickname"
       },
       "selectLabels": {
         "playerLevel": {

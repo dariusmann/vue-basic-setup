@@ -30,6 +30,19 @@ export const GameFieldType = {
   Unknown: 'unknown'
 }
 
+export const District = {
+  Darnytskyi: 'darnytskyi',
+  Desnianskyi: 'desnianskyi',
+  Dniprovskyi: 'dniprovskyi',
+  Holosiivskyi: 'holosiivskyi',
+  Obolonskyi: 'obolonskyi',
+  Pecherskyi: 'pecherskyi',
+  Podilskyi: 'podilskyi',
+  Shevchenkivskyi: 'shevchenkivskyi',
+  Solomianskyi: 'solomianskyi',
+  Sviatoshynskyi: 'sviatoshynskyi'
+}
+
 export const PLayerLevelLabels = [
   {
     label: i18n.t('component.createGameForm.selectLabels.playerLevel.beginner'),
@@ -100,5 +113,48 @@ export const GameFieldTypeLabels = [
   {
     label: i18n.t('text.unknown'),
     value: GameFieldType.Unknown
+  }
+]
+
+export const DistrictLabels = [
+  {
+    label: 'Darnytskyi',
+    value: District.Darnytskyi
+  },
+  {
+    label: 'Desnianskyi',
+    value: District.Desnianskyi
+  },
+  {
+    label: 'Dniprovskyi',
+    value: District.Dniprovskyi
+  },
+  {
+    label: 'Holosiivskyi',
+    value: District.Holosiivskyi
+  },
+  {
+    label: 'Obolonskyi',
+    value: District.Obolonskyi
+  },
+  {
+    label: 'Pecherskyi',
+    value: District.Pecherskyi
+  },
+  {
+    label: 'Podilskyi',
+    value: District.Podilskyi
+  },
+  {
+    label: 'Shevchenkivskyi',
+    value: District.Shevchenkivskyi
+  },
+  {
+    label: 'Solomianskyi',
+    value: District.Solomianskyi
+  },
+  {
+    label: 'Sviatoshynskyi',
+    value: District.Sviatoshynskyi
   }
 ]

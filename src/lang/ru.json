@@ -63,7 +63,8 @@
         "locker": "Свободный",
         "fieldType": "Тип поля",
         "comment": "Дополнительная информация",
-        "contact": "Ваш контакт в Telegram"
+        "contact": "Ваш ник в Telegram",
+        "telegram": "Telegram"
       },
       "selectLabels": {
         "playerLevel": {

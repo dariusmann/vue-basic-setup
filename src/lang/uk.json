@@ -63,7 +63,8 @@
         "locker": "Шафка",
         "fieldType": "Тип поля",
         "comment": "Додаткова інформація",
-        "contact": "Ви контактуєте з Telegram"
+        "contact": "Ви псевдонім Telegram",
+        "telegram": "Telegram"
       },
       "selectLabels": {
         "playerLevel": {
