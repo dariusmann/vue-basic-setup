@@ -14,7 +14,8 @@
     "time": "Время",
     "players": "Игроки",
     "min": "Мин",
-    "max": "Макс"
+    "max": "Макс",
+    "unknown": "Неизвестно"
   },
   "errorMessage": {
     "required": "Требуется",
@@ -44,7 +45,33 @@
       "label": {
         "playerRange": "Минимальное и максимальное количество игроков",
         "startDatetime": "Выберите начало игры",
-        "endDatetime": "Выберите конец игры"
+        "endDatetime": "Выберите конец игры",
+        "format": "Формат",
+        "playerLevel": "Уровень игрока",
+        "shower": "Душ",
+        "parking": "Парковка",
+        "dressingRoom": "Гардеробная",
+        "locker": "Свободный",
+        "fieldType": "Тип поля",
+        "comment": "Дополнительная информация",
+        "contact": "Ваш контакт в Telegram"
+      },
+      "selectLabels": {
+        "playerLevel": {
+          "beginner": "Новичок",
+          "beginnerToMedium": "От начинающего до среднего",
+          "medium": "Средний",
+          "mediumToAdvanced": "От среднего до продвинутого",
+          "advanced": "Расширенный",
+          "professional": "Профессионал"
+        },
+        "fieldType": {
+          "outside": "Снаружи",
+          "inside": "Внутри"
+        }
+      },
+      "hint": {
+        "comment": "Станция метро, цена..."
       },
       "validationMessage": {
         "startDatetimeRequired": "Требуется время начальной даты",
@@ -61,7 +88,7 @@
   "view": {
     "game": {
       "createGame": {
-        "header": "Создать игру",
+        "header": "Опубликовать игру",
         "message": {
           "createGameSuccess": "Игра была успешно создана",
           "toManyGamesForUser": "Вы можете создать не более 3 игр"

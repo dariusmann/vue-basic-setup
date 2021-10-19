@@ -5,35 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/sass/components/components.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Game/Finder/CalendarEventCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/game.exceptions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/datime.helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/google.maps.helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Game/CreateForm/GameLocationForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Game/CreateForm/PlayersRange.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/abstracts/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/abstracts/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/GameCalendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Finder/GameCalendar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/datetime.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/datetime.constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Game/GameForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/GameForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/game.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/game.constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lang/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/game.models.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/game.models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/game.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/game.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Game/GameCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game/GameCreate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game/GameFinder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +38,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Game/GameForm.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/App.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/services/game.service.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/constants/game.constants.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/views/Game/GameCreate.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Game/CreateForm/GameLocationForm.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="1zF3lvkTzT2DXjVCDklinvozMBM" />
@@ -133,66 +129,11 @@
       <workItem from="1634375761853" duration="5000" />
       <workItem from="1634390753126" duration="40000" />
       <workItem from="1634391250531" duration="5582000" />
+      <workItem from="1634629548422" duration="4914000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="823" y="394" key="#ESLint" timestamp="1633789414588">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state x="823" y="394" key="#ESLint/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633789414588" />
-    <state x="683" y="304" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1634149738936">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state x="683" y="304" key="#com.intellij.fileTypes.FileTypeChooser/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634149738936" />
-    <state width="1930" height="58" key="GridCell.Tab.0.bottom" timestamp="1633856064113">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state width="1930" height="58" key="GridCell.Tab.0.bottom/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064113" />
-    <state width="1930" height="58" key="GridCell.Tab.0.center" timestamp="1633856064112">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state width="1930" height="58" key="GridCell.Tab.0.center/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064112" />
-    <state width="1930" height="58" key="GridCell.Tab.0.left" timestamp="1633856064112">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state width="1930" height="58" key="GridCell.Tab.0.left/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064112" />
-    <state width="1930" height="58" key="GridCell.Tab.0.right" timestamp="1633856064113">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state width="1930" height="58" key="GridCell.Tab.0.right/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633856064113" />
-    <state x="531" y="114" key="RollbackChangesDialog" timestamp="1634244127545">
-      <screen x="0" y="23" width="1440" height="773" />
-    </state>
-    <state x="531" y="114" key="RollbackChangesDialog/0.23.1440.773@0.23.1440.773" timestamp="1634244127545" />
-    <state x="469" y="147" key="SettingsEditor" timestamp="1634161878545">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="469" y="147" key="SettingsEditor/-1440.23.1440.779/0.23.1920.1057@0.23.1920.1057" timestamp="1634161878545" />
-    <state x="469" y="134" key="SettingsEditor/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1633789307848" />
-    <state x="661" y="250" width="598" height="490" key="find.popup" timestamp="1634399440470">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state x="661" y="277" width="598" height="549" key="find.popup/-1440.23.1440.779/0.23.1920.1057@0.23.1920.1057" timestamp="1634161822104" />
-    <state x="661" y="250" width="598" height="490" key="find.popup/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634399440470" />
-    <state x="661" y="251" width="598" height="492" key="find.popup/-1440.23.1440.877/0.23.1920.947@0.23.1920.947" timestamp="1634395953928" />
-    <state x="660" y="253" width="598" height="497" key="find.popup/-1440.23.1440.877/0.23.1920.956@0.23.1920.956" timestamp="1633881035508" />
-    <state x="660" y="254" width="598" height="500" key="find.popup/-1440.23.1440.877/0.23.1920.960@0.23.1920.960" timestamp="1633879850416" />
-    <state x="496" y="213" width="568" height="490" key="find.popup/0.23.1440.792@0.23.1440.792" timestamp="1634074216911" />
-    <state x="790" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1634032518825">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state x="790" y="276" key="refactoring.ChangeSignatureDialog/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634032518825" />
-    <state x="625" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1634399646292">
-      <screen x="0" y="23" width="1920" height="944" />
-    </state>
-    <state x="833" y="59" width="894" height="913" key="search.everywhere.popup/-1440.23.1440.773/0.23.1920.1057@0.23.1920.1057" timestamp="1634163748925" />
-    <state x="625" y="230" width="670" height="676" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.944@0.23.1920.944" timestamp="1634399646292" />
-    <state x="625" y="231" width="670" height="679" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.947@0.23.1920.947" timestamp="1633890266677" />
-    <state x="625" y="233" width="670" height="685" key="search.everywhere.popup/-1440.23.1440.877/0.23.1920.956@0.23.1920.956" timestamp="1633882887353" />
-    <state x="625" y="50" width="670" height="676" key="search.everywhere.popup/0.23.1440.783@0.23.1440.783" timestamp="1634069941122" />
   </component>
 </project>

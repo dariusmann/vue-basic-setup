@@ -23,11 +23,8 @@
                 v-model="details.address"
                 :rules="[rules.required]"
                 :label="$t('text.address')"
-                required
+                :hint="$t('text.required')"
               ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-text-field label="You Telegram number" :rules="[rules.required]" required/>
             </v-col>
             <v-col cols="12" md="6">
               <v-datetime-picker
@@ -41,56 +38,53 @@
                 v-model="details.endDatetime"
                 :time-picker-props="timePickerProps"/>
             </v-col>
-            <v-col cols="12" md="12">
-              <v-subheader>{{ $t('component.createGameForm.label.playerRange') }}</v-subheader>
-              <v-range-slider
-                v-model="details.playersAmountRange"
-                :max="max"
-                :min="min"
-                color="teal"
-                track-color="teal lighten-4"
-                hide-details
-                class="align-center"
-              >
-                <template v-slot:prepend>
-                  <v-text-field
-                    :value="details.playersAmountRange[0]"
-                    class="mt-0 pt-0"
-                    hide-details
-                    single-line
-                    type="number"
-                    style="width: 60px"
-                  ></v-text-field>
-                </template>
-                <template v-slot:append>
-                  <v-text-field
-                    :value="details.playersAmountRange[1]"
-                    class="mt-0 pt-0"
-                    hide-details
-                    single-line
-                    type="number"
-                    style="width: 60px"
-                  ></v-text-field>
-                </template>
-              </v-range-slider>
-            </v-col>
             <v-col cols="12" md="6">
               <v-select
+                v-model="details.format"
                 :items="gameFormats"
                 item-text="label"
                 item-value="value"
-                label="Format"
+                :label="$t('component.createGameForm.label.format')"
                 :rules="[rules.required]"
               ></v-select>
             </v-col>
             <v-col cols="12" md="6">
-              <v-textarea label="Comment" :hint="`District, Metro Station, Price...`"/>
+              <v-select
+                v-model="details.level"
+                :items="playerLevels"
+                item-text="label"
+                item-value="value"
+                :label="$t('component.createGameForm.label.playerLevel')"
+                :rules="[rules.required]"
+              ></v-select>
+            </v-col>
+            <v-col cols="12" md="6">
+              <VuePhoneNumberInput
+                v-model="details.contact"
+                default-country-code="UA"
+                @update="changePhoneNumber"
+                :error="!phoneNumber.isValid"
+                :translations="phoneNumberTranslations"
+                dark
+              />
+            </v-col>
+            <v-row>
+              <v-col cols="12" md="12">
+                <GameLocationForm @change="changeLocation"/>
+              </v-col>
+            </v-row>
+            <v-col cols="12" md="6">
+              <v-textarea
+                v-model="details.comment"
+                :label="$t('component.createGameForm.label.comment')"
+                :hint="$t('component.createGameForm.hint.comment')"/>
             </v-col>
             <v-col cols="12" md="12">
               <v-btn
                 color="teal"
                 elevation="2"
                 class="white--text"
+                :loading="this.loading"
                 @click="this.submit">{{ $t('text.create') }}
               </v-btn>
             </v-col>
@@ -102,12 +96,18 @@
 </template>
 
 <script>
-import { GameFormat, GameTypes } from '@/constants/game.constants'
+import { GameFormat, GameTypes, PlayerLevel } from '@/constants/game.constants'
 import moment from 'moment'
+import GameLocationForm from '@/components/Game/CreateForm/GameLocationForm'
 
 export default {
   name: 'GameForm',
+  components: { GameLocationForm },
   props: {
+    loading: {
+      type: Boolean,
+      default: false
+    },
     initialAddress: {
       type: String,
       default: ''
@@ -123,23 +123,42 @@ export default {
     initialEndDatetime: {
       type: Date,
       default: null
+    },
+    initialFormat: {
+      type: Object,
+      default: null
+    },
+    initialLevel: {
+      type: Object,
+      default: null
     }
   },
   data: function () {
     return {
+      details: {
+        type: GameTypes.Soccer,
+        address: this.initialAddress,
+        playersAmountRange: this.initialPlayerAmountRange,
+        startDatetime: this.initialStartDatetime,
+        endDatetime: this.initialEndDatetime,
+        format: this.initialFormat,
+        level: this.initialLevel,
+        contact: null,
+        comment: null
+      },
       valid: false,
       min: 1,
       max: 35,
       timePickerProps: {
         format: '24hr'
       },
-      details: {
-        type: GameTypes.Soccer,
-        address: this.initialAddress,
-        playersAmountRange: this.initialPlayerAmountRange,
-        startDatetime: this.initialStartDatetime,
-        endDatetime: this.initialEndDatetime
+      phoneNumber: {
+        isValid: false
       },
+      phoneNumberTranslations: {
+        phoneNumberLabel: this.$i18n.t('component.createGameForm.label.contact')
+      },
+      location: null,
       rules: {
         required: value => !!value || this.$i18n.t('errorMessage.required')
       },
@@ -157,7 +176,13 @@ export default {
       this.customValidation()
 
       if (this.valid) {
-        this.$emit('send', this.details)
+        const data = {
+          details: this.details,
+          location: this.location
+        }
+        this.$emit('send', data)
+      } else {
+        window.scrollTo(0, 0)
       }
     },
     customValidation () {
@@ -183,35 +208,81 @@ export default {
         this.valid = false
         this.validation.message = this.$i18n.t('component.createGameForm.validationMessage.startBeforeEndDateTime')
       }
+
+      if (!this.phoneNumber.isValid) {
+        this.valid = false
+      }
     },
     resetValidation () {
       this.validation.show = false
       this.validation.message = ''
       this.$refs.form.resetValidation()
+    },
+    changeLocation (locationData) {
+      this.location = locationData
+    },
+    changePhoneNumber (phoneNumber) {
+      this.phoneNumber = phoneNumber
     }
   },
   computed: {
     gameFormats () {
       return [
         {
-          label: '4x4',
-          vale: GameFormat.Format4x4
+          label: GameFormat.Format4x4,
+          value: GameFormat.Format4x4
         },
         {
-          label: '5x5',
-          vale: GameFormat.Format5x5
+          label: GameFormat.Format5x5,
+          value: GameFormat.Format5x5
         },
         {
-          label: '6x6',
-          vale: GameFormat.Format6x6
+          label: GameFormat.Format5x5x5,
+          value: GameFormat.Format5x5x5
         },
         {
-          label: '8x8',
-          vale: GameFormat.Format8x8
+          label: GameFormat.Format6x6,
+          value: GameFormat.Format6x6
         },
         {
-          label: '11x11',
-          vale: GameFormat.Format11x11
+          label: GameFormat.Format6x6x6,
+          value: GameFormat.Format6x6x6
+        },
+        {
+          label: GameFormat.Format8x8,
+          value: GameFormat.Format8x8
+        },
+        {
+          label: GameFormat.Format11x11,
+          value: GameFormat.Format11x11
+        }
+      ]
+    },
+    playerLevels () {
+      return [
+        {
+          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.beginner'),
+          value: PlayerLevel.Beginner
+        },
+        {
+          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.beginnerToMedium'),
+          value: PlayerLevel.BeginnerToMedium
+        },
+        {
+          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.medium'),
+          value: PlayerLevel.Medium
+        },
+        {
+          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.mediumToAdvanced'),
+          value: PlayerLevel.MediumToAdvanced
+        },
+        {
+          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.advanced'),
+          value: PlayerLevel.Advanced
+        },
+        {
+          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.professional'),
+          value: PlayerLevel.Professional
         }
       ]
     }

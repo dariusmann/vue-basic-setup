@@ -14,7 +14,8 @@
     "time": "Час",
     "players": "Гравці",
     "min": "Мин",
-    "max": "Макс"
+    "max": "Макс",
+    "unknown": "Невідомий"
   },
   "errorMessage": {
     "required": "вимагається",
@@ -44,7 +45,33 @@
       "label": {
         "playerRange": "Мінімальна та максимальна кількість гравців",
         "startDatetime": "Виберіть початок гри",
-        "endDatetime": "Виберіть кінець гри"
+        "endDatetime": "Виберіть кінець гри",
+        "format": "Формат",
+        "playerLevel": "Рівень гравця",
+        "shower": "Душ",
+        "parking": "Парковка",
+        "dressingRoom": "Вбиральня",
+        "locker": "Шафка",
+        "fieldType": "Тип поля",
+        "comment": "Додаткова інформація",
+        "contact": "Ви контактуєте з Telegram"
+      },
+      "selectLabels": {
+        "playerLevel": {
+          "beginner": "Початківець",
+          "beginnerToMedium": "Від початківця до середнього",
+          "medium": "Середній",
+          "mediumToAdvanced": "Середній до просунутого",
+          "advanced": "Розширений",
+          "professional": "Професіонал"
+        },
+        "fieldType": {
+          "outside": "Зовні",
+          "inside": "Всередині"
+        }
+      },
+      "hint": {
+        "comment": "Станція метро, ціна..."
       },
       "validationMessage": {
         "startDatetimeRequired": "Потрібен час початку дати",
@@ -61,7 +88,7 @@
   "view": {
     "game": {
       "createGame": {
-        "header": "Створити гру",
+        "header": "Опублікувати гру",
         "message": {
           "createGameSuccess": "Гра успішно створена",
           "toManyGamesForUser": "Ви можете створити максимум 3 ігри"

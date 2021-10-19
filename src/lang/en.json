@@ -14,7 +14,9 @@
     "time": "Time",
     "players": "Players",
     "min": "min",
-    "max": "max"
+    "max": "max",
+    "unknown": "Unknown",
+    "required": "Required"
   },
   "errorMessage": {
     "required": "Required",
@@ -44,7 +46,33 @@
       "label": {
         "playerRange": "Min and max amount of players",
         "startDatetime": "Select game start",
-        "endDatetime": "Select game end"
+        "endDatetime": "Select game end",
+        "format": "Format",
+        "playerLevel": "Player level",
+        "shower": "Shower",
+        "parking": "Parking",
+        "dressingRoom": "Dressing room",
+        "locker": "Locker",
+        "fieldType": "Field type",
+        "comment": "Comment",
+        "contact": "You telegram contact"
+      },
+      "selectLabels": {
+        "playerLevel": {
+          "beginner": "Beginner",
+          "beginnerToMedium": "Beginner to medium",
+          "medium": "Medium",
+          "mediumToAdvanced": "Medium to advanced",
+          "advanced": "Advanced",
+          "professional": "Professional"
+        },
+        "fieldType": {
+          "outside": "Outside",
+          "inside": "Inside"
+        }
+      },
+      "hint": {
+        "comment": "Metro station, Price..."
       },
       "validationMessage": {
         "startDatetimeRequired": "Start date time is required",
@@ -61,7 +89,7 @@
   "view": {
     "game": {
       "createGame": {
-        "header": "Create game",
+        "header": "Publish game",
         "message": {
           "createGameSuccess": "Game was successfully created",
           "toManyGamesForUser": "You can only create a maximum of 3 games"

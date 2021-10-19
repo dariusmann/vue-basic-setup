@@ -40,7 +40,7 @@
         </v-alert>
       </v-col>
     </v-row>
-    <CreateGameForm @send="create"/>
+    <CreateGameForm @send="create" :loading="this.loading"/>
   </v-container>
 </template>
 
@@ -65,7 +65,7 @@ export default {
     }
   },
   methods: {
-    async create (details) {
+    async create (data) {
       this.loading = true
       this.showMessage.createSuccess = false
       this.showMessage.toManyGamesForUser = false
@@ -73,8 +73,9 @@ export default {
       this.errorMessage = ''
 
       try {
-        await GameService.createGame(details)
+        await GameService.createGame(data)
         this.showMessage.createSuccess = true
+        window.scrollTo(0, 0)
       } catch (e) {
         if (e instanceof ToManyGameForUserException) {
           this.showMessage.toManyGamesForUser = true

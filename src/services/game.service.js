@@ -7,10 +7,11 @@ import { ToManyGameForUserException } from '@/exceptions/game.exceptions'
 import { TimezoneHelper } from '@/helpers/datime.helpers'
 
 const GameService = {
-   createGame: async function (details) {
+   createGame: async function (data) {
     try {
       await ApiService.post('/games', {
-        details: this.prepareGameData(details)
+        details: this.prepareGameDetails(data.details),
+        location: this.prepareLocationDetails(data.location)
       })
     } catch (error) {
       if (error.response.status === StatusCodes.BAD_REQUEST) {
@@ -44,7 +45,7 @@ const GameService = {
       }
     }
   },
-  prepareGameData: function (details) {
+  prepareGameDetails: function (details) {
     const startDatetime = TimezoneHelper.toUTC(details.startDatetime)
     const endDatetime = TimezoneHelper.toUTC(details.endDatetime)
 
@@ -54,7 +55,21 @@ const GameService = {
       min_player: details.playersAmountRange[0],
       max_player: details.playersAmountRange[1],
       start_datetime: startDatetime,
-      end_datetime: endDatetime
+      end_datetime: endDatetime,
+      format: details.format,
+      player_level: details.level,
+      district: 'darnytskyi',
+      contact: details.contact,
+      comment: details.comment
+    }
+  },
+  prepareLocationDetails: function (location) {
+    return {
+      shower: location.shower,
+      parking: location.parking,
+      dressing_room: location.dressingRoom,
+      locker: location.locker,
+      field_type: location.fieldType
     }
   }
 }

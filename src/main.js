@@ -8,6 +8,7 @@ import Axios from 'axios'
 import DatetimePicker from 'vuetify-datetime-picker'
 import i18n from '@/plugins/i18n'
 import CountryFlag from 'vue-country-flag'
+import 'vue-phone-number-input/nuxt/plugin'
 
 ApiService.init(process.env.VUE_APP_BACKEND_API_URL)
 
