@@ -16,7 +16,15 @@
     "min": "min",
     "max": "max",
     "unknown": "Unknown",
-    "required": "Required"
+    "required": "Required",
+    "format": "Format",
+    "playerLevel": "Player level",
+    "comment": "Comment",
+    "fieldType": "Field type",
+    "dressingRoom": "Dressing room",
+    "parking": "Parking",
+    "locker": "Locker",
+    "shower": "Shower"
   },
   "errorMessage": {
     "required": "Required",
@@ -125,7 +133,7 @@
         "message": "You can also announce games to find players!",
         "callToAction": "To publish a game register here..."
       },
-      "contact": "If you wanna contact me directly for feedback you can to this by writing me on Telegram nickname @dariusmann"
+      "contact": "If you wanna contact me directly you can do this by writing me on Telegram nickname @dariusmann"
     }
   }
 }

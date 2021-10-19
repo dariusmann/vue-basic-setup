@@ -15,7 +15,16 @@
     "players": "Игроки",
     "min": "Мин",
     "max": "Макс",
-    "unknown": "Неизвестно"
+    "unknown": "Неизвестно",
+    "required": "Требуется",
+    "format": "Формат",
+    "playerLevel": "Уровень игрока",
+    "comment": "Комментарий",
+    "fieldType": "Тип поля",
+    "dressingRoom": "Гардеробная",
+    "parking": "Парковка",
+    "locker": "Шкафчик",
+    "shower": "Душ"
   },
   "errorMessage": {
     "required": "Требуется",

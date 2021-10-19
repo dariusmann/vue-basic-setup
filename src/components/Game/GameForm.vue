@@ -120,7 +120,7 @@
 </template>
 
 <script>
-import { GameFormat, GameTypes, PlayerLevel } from '@/constants/game.constants'
+import { GameFormatLabels, GameTypes, PLayerLevelLabels } from '@/constants/game.constants'
 import moment from 'moment'
 import GameLocationForm from '@/components/Game/CreateForm/GameLocationForm'
 import { extend, ValidationObserver, ValidationProvider, setInteractionMode } from 'vee-validate'
@@ -268,64 +268,10 @@ export default {
   },
   computed: {
     gameFormats () {
-      return [
-        {
-          label: GameFormat.Format4x4,
-          value: GameFormat.Format4x4
-        },
-        {
-          label: GameFormat.Format5x5,
-          value: GameFormat.Format5x5
-        },
-        {
-          label: GameFormat.Format5x5x5,
-          value: GameFormat.Format5x5x5
-        },
-        {
-          label: GameFormat.Format6x6,
-          value: GameFormat.Format6x6
-        },
-        {
-          label: GameFormat.Format6x6x6,
-          value: GameFormat.Format6x6x6
-        },
-        {
-          label: GameFormat.Format8x8,
-          value: GameFormat.Format8x8
-        },
-        {
-          label: GameFormat.Format11x11,
-          value: GameFormat.Format11x11
-        }
-      ]
+      return GameFormatLabels
     },
     playerLevels () {
-      return [
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.beginner'),
-          value: PlayerLevel.Beginner
-        },
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.beginnerToMedium'),
-          value: PlayerLevel.BeginnerToMedium
-        },
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.medium'),
-          value: PlayerLevel.Medium
-        },
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.mediumToAdvanced'),
-          value: PlayerLevel.MediumToAdvanced
-        },
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.advanced'),
-          value: PlayerLevel.Advanced
-        },
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.playerLevel.professional'),
-          value: PlayerLevel.Professional
-        }
-      ]
+      return PLayerLevelLabels
     }
   }
 }

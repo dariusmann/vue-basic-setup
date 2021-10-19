@@ -10,30 +10,92 @@
       flat
     >
       <v-toolbar dark>
-        <v-toolbar-title v-html="selectedEvent.name"></v-toolbar-title>
+        <v-toolbar-title v-html="eventName"></v-toolbar-title>
         <v-spacer></v-spacer>
       </v-toolbar>
       <v-card-text>
         <p>
           <a :href="addressLink" target="_blank" class="AddressLink">
             <b class="tw-underline">{{ $t('text.address') }}:</b>
+            {{ selectedEvent.address }}
             <v-btn icon>
               <v-icon>mdi-map-marker</v-icon>
             </v-btn>
-            {{ selectedEvent.name }}
           </a>
         </p>
         <p>
           <b class="tw-underline">{{ $t('text.time') }}:</b>
+          {{ time }}
           <v-btn icon>
             <v-icon>mdi-clock-outline</v-icon>
           </v-btn>
-          {{ time }}
         </p>
         <p>
-          <b class="tw-underline">{{ $t('text.players') + ' (' + $t('text.min') + '-' + $t('text.max') + ')' }}:</b>
-          {{ playerRange }}
+          <b class="tw-underline">{{ $t('text.format') }}:</b>
+          {{format}}
         </p>
+        <p>
+          <b class="tw-underline">{{ $t('text.playerLevel') }}:</b>
+          {{playerLevel}}
+        </p>
+        <p v-show="comment">
+          <b class="tw-underline">{{ $t('text.comment') }}:</b>
+          {{comment}}
+        </p>
+        <p>
+          <b class="tw-underline">{{ $t('text.fieldType') }}:</b>
+          {{fieldType}}
+        </p>
+        <div>
+          <v-chip
+            class="ma-2"
+            color="pink"
+            label
+            text-color="white"
+            v-show="hasShower"
+          >
+            <v-icon left>
+              mdi-shower-head
+            </v-icon>
+            {{$t('text.shower')}}
+          </v-chip>
+          <v-chip
+            class="ma-2"
+            color="blue"
+            label
+            text-color="white"
+            v-show="hasParking"
+          >
+            <v-icon left>
+              mdi-parking
+            </v-icon>
+            {{$t('text.parking')}}
+          </v-chip>
+          <v-chip
+            class="ma-2"
+            color="orange"
+            label
+            text-color="white"
+            v-show="hasDressingRoom"
+          >
+            <v-icon left>
+              mdi-hanger
+            </v-icon>
+            {{$t('text.dressingRoom')}}
+          </v-chip>
+          <v-chip
+            class="ma-2"
+            color="red"
+            label
+            text-color="white"
+            v-show="hasLocker"
+          >
+            <v-icon left>
+              mdi-locker
+            </v-icon>
+            {{$t('text.locker')}}
+          </v-chip>
+        </div>
       </v-card-text>
       <v-card-actions>
         <v-btn
@@ -52,6 +114,7 @@
 import moment from 'moment'
 import DatetimeConstants from '@/constants/datetime.constants'
 import GoogleMapsHelpers from '@/helpers/google.maps.helpers'
+import { GameFieldTypeLabels, PLayerLevelLabels } from '@/constants/game.constants'
 
 export default {
   name: 'CalendarEventCard',
@@ -69,22 +132,63 @@ export default {
     }
   },
   computed: {
+    eventName () {
+      return this.selectedEvent.format + ' ' + this.selectedEvent.address
+    },
     time () {
       const start = moment(this.selectedEvent.start)
       const end = moment(this.selectedEvent.end)
 
       return start.format(DatetimeConstants.TimeFormat) + '-' + end.format(DatetimeConstants.TimeFormat)
     },
-    playerRange () {
-      return this.selectedEvent.minPlayers + '-' + this.selectedEvent.maxPlayers
-    },
     addressLink () {
       return GoogleMapsHelpers.getWebMapUrl(this.selectedEvent.address)
+    },
+    format () {
+      return this.selectedEvent.format
+    },
+    playerLevel () {
+      return this.resolvePlayerLevelLabel(this.selectedEvent.playerLevel)
+    },
+    telegramLink () {
+      return ''
+    },
+    fieldType () {
+      return this.resolveFieldTypeLabel(this.selectedEvent.fieldType)
+    },
+    comment () {
+      return this.selectedEvent.comment
+    },
+    hasShower () {
+      return this.selectedEvent.shower
+    },
+    hasParking () {
+      return this.selectedEvent.parking
+    },
+    hasDressingRoom () {
+      return this.selectedEvent.dressingRoom
+    },
+    hasLocker () {
+      return this.selectedEvent.locker
     }
   },
   methods: {
     closeCard () {
       this.$emit('close')
+    },
+    resolvePlayerLevelLabel (playerLevelKey) {
+      for (const key in PLayerLevelLabels) {
+        if (PLayerLevelLabels[key].value === playerLevelKey) {
+          return PLayerLevelLabels[key].label
+        }
+      }
+    },
+    resolveFieldTypeLabel (fieldType) {
+      for (const key in GameFieldTypeLabels) {
+        if (GameFieldTypeLabels[key].value === fieldType) {
+          return GameFieldTypeLabels[key].label
+        }
+      }
     }
   }
 }

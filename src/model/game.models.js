@@ -10,6 +10,15 @@ class GameData {
     this.maxPlayer = game.details.max_player
     this.startDatetime = game.details.start_datetime
     this.endDatetime = game.details.end_datetime
+    this.playerLevel = game.details.player_level
+    this.format = game.details.format
+    this.contact = game.details.contact
+    this.comment = game.details.comment
+    this.shower = game.location.shower
+    this.parking = game.location.parking
+    this.dressingRoom = game.location.dressing_room
+    this.locker = game.location.locker
+    this.fieldType = game.location.field_type
   }
 
   getStartTimezone () {

@@ -53,12 +53,19 @@ export default {
       for (const key in this.games) {
         const game = this.games[key]
         events.push({
-          name: game.address,
+          name: game.format + ' ' + game.address,
           start: game.getStartTimezone(),
           end: game.getEndTimezone(),
           address: game.address,
-          minPlayers: game.minPlayer,
-          maxPlayers: game.maxPlayer
+          format: game.format,
+          playerLevel: game.playerLevel,
+          contact: game.contact,
+          comment: game.comment,
+          shower: game.shower,
+          parking: game.parking,
+          dressingRoom: game.dressingRoom,
+          locker: game.locker,
+          fieldType: game.fieldType
         })
       }
 

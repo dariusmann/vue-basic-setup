@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { GameFieldType } from '@/constants/game.constants'
+import { GameFieldTypeLabels } from '@/constants/game.constants'
 
 export default {
   name: 'GameLocationForm',
@@ -71,20 +71,7 @@ export default {
   },
   computed: {
     fieldTypes () {
-      return [
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.fieldType.inside'),
-          value: GameFieldType.Inside
-        },
-        {
-          label: this.$i18n.t('component.createGameForm.selectLabels.fieldType.outside'),
-          value: GameFieldType.Outside
-        },
-        {
-          label: this.$i18n.t('text.unknown'),
-          value: GameFieldType.Unknown
-        }
-      ]
+      return GameFieldTypeLabels
     }
   }
 }

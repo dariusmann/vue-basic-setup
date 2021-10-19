@@ -15,7 +15,16 @@
     "players": "Гравці",
     "min": "Мин",
     "max": "Макс",
-    "unknown": "Невідомий"
+    "unknown": "Невідомий",
+    "required": "вимагається",
+    "format": "Формат",
+    "playerLevel": "Рівень гравця",
+    "comment": "Прокоментуйте",
+    "fieldType": "Тип поля",
+    "dressingRoom": "Вбиральня",
+    "parking": "Парковка",
+    "locker": "Шафка",
+    "shower": "Душ"
   },
   "errorMessage": {
     "required": "вимагається",
