@@ -14,6 +14,7 @@ const GameService = {
         location: this.prepareLocationDetails(data.location)
       })
     } catch (error) {
+      console.log(error)
       if (error.response.status === StatusCodes.BAD_REQUEST) {
         throw new BadRequestException(error)
       }

@@ -83,6 +83,7 @@ export default {
         } else {
           this.showMessage.unexpectedError = true
           this.errorMessage = this.$i18n.t('errorMessage.unexpectedError')
+          console.log(e)
         }
       }
 

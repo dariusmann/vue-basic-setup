@@ -15,82 +15,106 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-form ref="form" v-model="valid">
-        <v-container>
+      <validation-observer
+        ref="observer"
+        :v-slot="{valid}"
+      >
+      <v-form ref="form" v-model="valid" @submit.prevent="onSubmit">
+        <v-row>
+          <v-col cols="12" md="12">
+            <validation-provider
+              v-slot="{errors}"
+              :name="$t('text.address')"
+              rules="required"
+            >
+            <v-text-field
+              v-model="details.address"
+              :label="$t('text.address')"
+              :hint="$t('text.required')"
+              :error-messages="errors"
+              required
+            ></v-text-field>
+            </validation-provider>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-datetime-picker
+              :label="$t('component.createGameForm.label.startDatetime')"
+              v-model="details.startDatetime"
+              :time-picker-props="timePickerProps"/>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-datetime-picker
+              :label="$t('component.createGameForm.label.endDatetime')"
+              v-model="details.endDatetime"
+              :time-picker-props="timePickerProps"/>
+          </v-col>
+          <v-col cols="12" md="6">
+            <validation-provider
+              v-slot="{errors}"
+              :name="$t('component.createGameForm.label.format')"
+              rules="required"
+            >
+            <v-select
+              v-model="details.format"
+              :items="gameFormats"
+              item-text="label"
+              item-value="value"
+              :error-messages="errors"
+              :label="$t('component.createGameForm.label.format')"
+              :hint="$t('text.required')"
+            ></v-select>
+            </validation-provider>
+          </v-col>
+          <v-col cols="12" md="6">
+            <validation-provider
+              v-slot="{errors}"
+              :name="$t('component.createGameForm.label.playerLevel')"
+              rules="required"
+            >
+            <v-select
+              v-model="details.level"
+              :items="playerLevels"
+              item-text="label"
+              item-value="value"
+              :label="$t('component.createGameForm.label.playerLevel')"
+              :error-messages="errors"
+              :hint="$t('text.required')"
+            ></v-select>
+            </validation-provider>
+          </v-col>
+          <v-col cols="12" md="6">
+            <VuePhoneNumberInput
+              v-model="details.contact"
+              default-country-code="UA"
+              @update="changePhoneNumber"
+              :error="!phoneNumber.isValid"
+              :translations="phoneNumberTranslations"
+              dark
+            />
+          </v-col>
           <v-row>
             <v-col cols="12" md="12">
-              <v-text-field
-                v-model="details.address"
-                :rules="[rules.required]"
-                :label="$t('text.address')"
-                :hint="$t('text.required')"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-datetime-picker
-                :label="$t('component.createGameForm.label.startDatetime')"
-                v-model="details.startDatetime"
-                :time-picker-props="timePickerProps"/>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-datetime-picker
-                :label="$t('component.createGameForm.label.endDatetime')"
-                v-model="details.endDatetime"
-                :time-picker-props="timePickerProps"/>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-select
-                v-model="details.format"
-                :items="gameFormats"
-                item-text="label"
-                item-value="value"
-                :label="$t('component.createGameForm.label.format')"
-                :rules="[rules.required]"
-              ></v-select>
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-select
-                v-model="details.level"
-                :items="playerLevels"
-                item-text="label"
-                item-value="value"
-                :label="$t('component.createGameForm.label.playerLevel')"
-                :rules="[rules.required]"
-              ></v-select>
-            </v-col>
-            <v-col cols="12" md="6">
-              <VuePhoneNumberInput
-                v-model="details.contact"
-                default-country-code="UA"
-                @update="changePhoneNumber"
-                :error="!phoneNumber.isValid"
-                :translations="phoneNumberTranslations"
-                dark
-              />
-            </v-col>
-            <v-row>
-              <v-col cols="12" md="12">
-                <GameLocationForm @change="changeLocation"/>
-              </v-col>
-            </v-row>
-            <v-col cols="12" md="6">
-              <v-textarea
-                v-model="details.comment"
-                :label="$t('component.createGameForm.label.comment')"
-                :hint="$t('component.createGameForm.hint.comment')"/>
-            </v-col>
-            <v-col cols="12" md="12">
-              <v-btn
-                color="teal"
-                elevation="2"
-                class="white--text"
-                :loading="this.loading"
-                @click="this.submit">{{ $t('text.create') }}
-              </v-btn>
+              <GameLocationForm @change="changeLocation"/>
             </v-col>
           </v-row>
-        </v-container>
+          <v-col cols="12" md="6">
+            <v-textarea
+              v-model="details.comment"
+              :label="$t('component.createGameForm.label.comment')"
+              :hint="$t('component.createGameForm.hint.comment')"/>
+          </v-col>
+          <v-col cols="12" md="12">
+            <v-btn
+              color="teal"
+              elevation="2"
+              class="white--text"
+              :loading="this.loading"
+              type="submit">{{ $t('text.create') }}
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-form>
+      </validation-observer>
     </v-row>
   </v-container>
 </template>
@@ -99,10 +123,24 @@
 import { GameFormat, GameTypes, PlayerLevel } from '@/constants/game.constants'
 import moment from 'moment'
 import GameLocationForm from '@/components/Game/CreateForm/GameLocationForm'
+import { extend, ValidationObserver, ValidationProvider, setInteractionMode } from 'vee-validate'
+import { required } from 'vee-validate/dist/rules'
+import i18n from '@/plugins/i18n'
+
+setInteractionMode('eager')
+
+extend('required', {
+  ...required,
+  message: i18n.t('text.required')
+})
 
 export default {
   name: 'GameForm',
-  components: { GameLocationForm },
+  components: {
+    GameLocationForm,
+    ValidationProvider,
+    ValidationObserver
+  },
   props: {
     loading: {
       type: Boolean,
@@ -146,7 +184,15 @@ export default {
         contact: null,
         comment: null
       },
+      location: {
+        shower: null,
+        parking: null,
+        dressingRoom: null,
+        locker: null,
+        fieldType: null
+      },
       valid: false,
+      errors: [],
       min: 1,
       max: 35,
       timePickerProps: {
@@ -158,10 +204,6 @@ export default {
       phoneNumberTranslations: {
         phoneNumberLabel: this.$i18n.t('component.createGameForm.label.contact')
       },
-      location: null,
-      rules: {
-        required: value => !!value || this.$i18n.t('errorMessage.required')
-      },
       validation: {
         show: false,
         message: ''
@@ -169,10 +211,10 @@ export default {
     }
   },
   methods: {
-    submit () {
+    async onSubmit () {
       this.resetValidation()
 
-      this.$refs.form.validate()
+      this.valid = await this.$refs.observer.validate()
       this.customValidation()
 
       if (this.valid) {
@@ -216,7 +258,6 @@ export default {
     resetValidation () {
       this.validation.show = false
       this.validation.message = ''
-      this.$refs.form.resetValidation()
     },
     changeLocation (locationData) {
       this.location = locationData
