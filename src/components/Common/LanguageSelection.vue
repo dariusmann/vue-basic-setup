@@ -1,5 +1,6 @@
 <template>
   <v-select
+    class="LanguageSelection"
     v-model="select"
     :items="items"
     item-text="flagCode"

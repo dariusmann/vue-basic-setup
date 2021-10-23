@@ -1,21 +1,50 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12" md="12" class="tw-flex tw-space tw-justify-between">
-        <div class="Menu">
-          <router-link to="/">Home</router-link>
-          <router-link to="/games">{{ $t('text.play') }}</router-link>
-          <router-link to="/games/create" v-show="isLoggedIn()">{{ $t('component.menu.linkText.createGame') }}</router-link>
-          <router-link to="/auth/register" v-show="!isLoggedIn()">{{ $t('text.register') }}</router-link>
-          <router-link to="/auth/login" v-show="!isLoggedIn()">{{ $t('text.login') }}</router-link>
-          <router-link to="/auth/logout" v-show="isLoggedIn()">{{ $t('text.logout') }}</router-link>
-        </div>
-        <div class="tw-w-20">
-          <LanguageSelection :default-select="getLangSelect()"/>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-toolbar flat>
+    <v-menu>
+      <template v-slot:activator="{ on, attrs }">
+        <v-app-bar-nav-icon
+          v-bind="attrs"
+          v-on="on"/>
+      </template>
+      <v-list>
+        <v-list-item>
+          <v-list-item-title>
+            <router-link to="/">Home</router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-title>
+            <router-link to="/games">{{ $t('text.play') }}</router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item v-show="isLoggedIn()">
+          <v-list-item-title>
+            <router-link to="/games/create">{{
+                $t('component.menu.linkText.createGame')
+              }}
+            </router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item v-show="!isLoggedIn()">
+          <v-list-item-title>
+            <router-link to="/auth/register">{{ $t('text.register') }}</router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item v-show="!isLoggedIn()">
+          <v-list-item-title>
+            <router-link to="/auth/login">{{ $t('text.login') }}</router-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item v-show="isLoggedIn()">
+          <v-list-item-title>
+            <router-link to="/auth/logout">{{ $t('text.logout') }}</router-link>
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+    <v-spacer></v-spacer>
+    <LanguageSelection :default-select="getLangSelect()"/>
+  </v-toolbar>
 </template>
 
 <script>
@@ -50,21 +79,5 @@ export default {
 </script>
 
 <style lang="scss">
-#nav {
-  display: flex;
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &:not(:first-child) {
-      margin-left: 5px;
-    }
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>

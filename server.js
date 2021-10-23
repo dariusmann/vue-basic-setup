@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production') {
-  // require('dotenv').config()
+  require('dotenv').config()
 }
 const proxy = require('http-proxy-middleware')
 const express = require('express')
