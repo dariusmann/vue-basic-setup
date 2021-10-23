@@ -13,7 +13,7 @@
       <country-flag :country='item.flagCode' size='normal'/>
     </template>
     <template v-slot:item="{ item }">
-      <country-flag :country='item.flagCode' size='normal'/> <span>{{item.flagCode}}</span>
+      <country-flag :country='item.flagCode' size='normal'/> <span>{{item.isoCode}}</span>
     </template>
   </v-select>
 </template>
