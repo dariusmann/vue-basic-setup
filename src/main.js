@@ -10,7 +10,7 @@ import i18n from '@/plugins/i18n'
 import CountryFlag from 'vue-country-flag'
 import 'vue-phone-number-input/nuxt/plugin'
 
-ApiService.init(process.env.VUE_APP_BACKEND_API_URL)
+ApiService.init(process.env.VUE_APP_BACKEND_API_PROXY_URL)
 
 Vue.prototype.$http = Axios
 Vue.config.devtools = true
