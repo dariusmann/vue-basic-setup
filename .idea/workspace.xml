@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Game/CreateForm/GameLocationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/CreateForm/GameLocationForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Finder/CalendarEventCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Finder/CalendarEventCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Finder/GameCalendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Finder/GameCalendar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/GameForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/GameForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/game.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/game.constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/game.models.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/game.models.js" afterDir="false" />
-    </list>
+    <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
