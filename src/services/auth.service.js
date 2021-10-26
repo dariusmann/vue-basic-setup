@@ -8,7 +8,7 @@ import { UnexpectedServerError } from '@/exceptions/http.exceptions'
 const AuthService = {
   registerUser: async function (email, password) {
     try {
-      await ApiService.post('/register', {
+      await ApiService.post('/auth/register', {
         email: email,
         password: password
       })
@@ -22,7 +22,7 @@ const AuthService = {
   },
   loginUser: async function (email, password) {
     try {
-      const response = await ApiService.post('/login', {
+      const response = await ApiService.post('/auth/login', {
           email: email,
           password: password
         }
@@ -48,7 +48,7 @@ const AuthService = {
   },
   logoutUser: async function () {
     try {
-      const response = await ApiService.post('/logout')
+      const response = await ApiService.post('/auth/logout')
 
       if (response.status === StatusCodes.NO_CONTENT) {
         await Store.dispatch('auth/logout')
