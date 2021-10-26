@@ -5,6 +5,7 @@ import { BadRequestException, UnexpectedServerError } from '@/exceptions/http.ex
 import { GameDataFactory } from '@/factories/game.factories'
 import { ToManyGameForUserException } from '@/exceptions/game.exceptions'
 import { TimezoneHelper } from '@/helpers/datime.helpers'
+import Store from '@/stores'
 
 const GameService = {
    createGame: async function (data) {
@@ -14,7 +15,6 @@ const GameService = {
         location: this.prepareLocationDetails(data.location)
       })
     } catch (error) {
-      console.log(error)
       if (error.response.status === StatusCodes.BAD_REQUEST) {
         throw new BadRequestException(error)
       }
@@ -30,7 +30,9 @@ const GameService = {
       const params = {
         type: gameType,
         from: fromDate.format(DatetimeConstants.DateFormat),
-        to: toDate.format(DatetimeConstants.DateFormat)
+        to: toDate.format(DatetimeConstants.DateFormat),
+        formats: Store.getters['filter/getGameFormats'],
+        playerLevels: Store.getters['filter/getPlayerLevels']
       }
 
       const response = await ApiService.get('/games', {

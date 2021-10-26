@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import auth from '@/stores/auth'
 import lang from '@/stores/lang'
+import filter from '@/stores/filter'
 
 Vue.use(Vuex)
 
@@ -14,6 +15,7 @@ export default new Vuex.Store({
 
   modules: {
     auth,
-    lang
+    lang,
+    filter
   }
 })

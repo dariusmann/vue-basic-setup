@@ -24,7 +24,9 @@
     "dressingRoom": "Вбиральня",
     "parking": "Парковка",
     "locker": "Шафка",
-    "shower": "Душ"
+    "shower": "Душ",
+    "gameFormat": "Формат гри",
+    "filter": "Фільтр"
   },
   "errorMessage": {
     "required": "вимагається",

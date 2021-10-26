@@ -24,7 +24,9 @@
     "dressingRoom": "Гардеробная",
     "parking": "Парковка",
     "locker": "Шкафчик",
-    "shower": "Душ"
+    "shower": "Душ",
+    "gameFormat": "Формат игры",
+    "filter": "Фильтр"
   },
   "errorMessage": {
     "required": "Требуется",

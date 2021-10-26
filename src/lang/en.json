@@ -25,7 +25,9 @@
     "parking": "Parking",
     "locker": "Locker",
     "shower": "Shower",
-    "telegram": "Telegram"
+    "telegram": "Telegram",
+    "gameFormat": "Game Format",
+    "filter": "Filter"
   },
   "errorMessage": {
     "required": "Required",
