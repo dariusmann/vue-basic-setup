@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { StatusCodes } from 'http-status-codes'
 import Store from '@/stores'
+import Router from '@/router'
 
 const ApiService = {
   _authenticationInterceptor: null,
@@ -37,8 +38,8 @@ const ApiService = {
       },
       async (error) => {
         if (error.request.status === StatusCodes.FORBIDDEN) {
-          Store.dispatch('auth/logout')
-          throw error
+          await Store.dispatch('auth/logout')
+          await Router.push({ name: 'Login' })
         }
 
         throw error

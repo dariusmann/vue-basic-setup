@@ -22,7 +22,7 @@
     <v-row>
       <v-col>
         <p>
-          {{ $t('view.home.contact') }} <a :href="telegramContact" target="_blank">dariusmann</a>
+          {{ $t('view.home.contact') }} <a :href="telegramContact" target="_blank">dariusmann</a>.
         </p>
       </v-col>
     </v-row>

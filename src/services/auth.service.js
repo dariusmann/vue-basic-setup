@@ -52,7 +52,7 @@ const AuthService = {
 
       if (response.status === StatusCodes.NO_CONTENT) {
         await Store.dispatch('auth/logout')
-        await Router.push('Login')
+        await Router.push({ name: 'Login' })
       }
     } catch (error) {
         throw new UnexpectedServerError(error.response.status, error.response.message)
