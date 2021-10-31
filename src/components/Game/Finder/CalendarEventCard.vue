@@ -122,6 +122,7 @@ import moment from 'moment'
 import DatetimeConstants from '@/constants/datetime.constants'
 import GoogleMapsHelpers from '@/helpers/google.maps.helpers'
 import { GameFieldTypeLabels, PLayerLevelLabels } from '@/constants/game.constants'
+import TelegramHelper from '@/helpers/telegram.helpers'
 
 export default {
   name: 'CalendarEventCard',
@@ -158,7 +159,7 @@ export default {
       return this.resolvePlayerLevelLabel(this.selectedEvent.playerLevel)
     },
     telegramLink () {
-      return 'https://t.me/' + this.selectedEvent.contact
+      return TelegramHelper.getTelegramLink(this.selectedEvent.contact)
     },
     fieldType () {
       return this.resolveFieldTypeLabel(this.selectedEvent.fieldType)

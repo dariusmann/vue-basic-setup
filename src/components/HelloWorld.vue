@@ -21,17 +21,26 @@
     </v-row>
     <v-row>
       <v-col>
-        <p>{{ $t('view.home.contact') }}</p>
+        <p>
+          {{ $t('view.home.contact') }} <a :href="telegramContact" target="_blank">dariusmann</a>
+        </p>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import TelegramHelper from '@/helpers/telegram.helpers'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data: function () {
+    return {
+      telegramContact: TelegramHelper.getTelegramLink('dariusmann')
+    }
   }
 }
 </script>

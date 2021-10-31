@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/telegram.helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Game/Finder/CalendarEventCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Finder/CalendarEventCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
