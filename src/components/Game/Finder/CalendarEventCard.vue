@@ -11,7 +11,6 @@
     >
       <v-toolbar dark>
         <v-toolbar-title v-html="eventName"></v-toolbar-title>
-        <v-spacer></v-spacer>
       </v-toolbar>
       <v-card-text>
         <p>
@@ -106,7 +105,6 @@
       </v-card-text>
       <v-card-actions>
         <v-btn
-          text
           color="secondary"
           @click="closeCard"
         >
