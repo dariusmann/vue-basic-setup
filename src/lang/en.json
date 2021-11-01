@@ -28,7 +28,8 @@
     "telegram": "Telegram",
     "gameFormat": "Game Format",
     "filter": "Filter",
-    "here": "here"
+    "here": "here",
+    "calendar": "calendar"
   },
   "errorMessage": {
     "required": "Required",
@@ -103,7 +104,7 @@
       "createGame": {
         "header": "Publish game",
         "message": {
-          "createGameSuccess": "Game was successfully created",
+          "createGameSuccess": "Game was successfully created. Check it out on the {calendar}.",
           "toManyGamesForUser": "You can only create a maximum of 3 games"
         }
       },

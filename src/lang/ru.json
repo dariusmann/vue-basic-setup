@@ -28,7 +28,8 @@
     "telegram": "Telegram",
     "gameFormat": "Формат игры",
     "filter": "Фильтр",
-    "here": "здесь"
+    "here": "здесь",
+    "calendar": "календарь"
   },
   "errorMessage": {
     "required": "Требуется",
@@ -104,7 +105,7 @@
       "createGame": {
         "header": "Опубликовать игру",
         "message": {
-          "createGameSuccess": "Игра была успешно создана",
+          "createGameSuccess": "Игра была успешно создана. Проверьте ее на {calendar}.",
           "toManyGamesForUser": "Вы можете создать не более 3 игр"
         },
         "gameFinder": {

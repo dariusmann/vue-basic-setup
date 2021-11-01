@@ -16,7 +16,7 @@
           text
           type="success"
         >
-          <div>{{ $t('view.game.createGame.message.createGameSuccess') }}!</div>
+          <div v-html="$t('view.game.createGame.message.createGameSuccess', {calendar: calendarLink})"/>
         </v-alert>
         <v-alert
           v-show="showMessage.toManyGamesForUser"
@@ -64,6 +64,11 @@ export default {
       errorMessage: ''
     }
   },
+  computed: {
+    calendarLink () {
+      return `<a href="/games" class="CalendarLink">${this.$i18n.t('text.calendar')}</a>`
+    }
+  },
   methods: {
     async create (data) {
       this.loading = true
@@ -92,6 +97,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+a.CalendarLink {
+  text-decoration: underline;
+}
 </style>
