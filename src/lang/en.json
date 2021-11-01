@@ -27,7 +27,8 @@
     "shower": "Shower",
     "telegram": "Telegram",
     "gameFormat": "Game Format",
-    "filter": "Filter"
+    "filter": "Filter",
+    "here": "here"
   },
   "errorMessage": {
     "required": "Required",
@@ -48,7 +49,7 @@
     },
     "registerForm": {
       "message": {
-        "registerSuccess": "Register was successful",
+        "registerSuccess": "Register was successful! You can login {here}.",
         "loginCallToAction": "Login now",
         "userAlreadyExists": "User with this email already exists"
       }

@@ -9,6 +9,7 @@
       <v-icon
         color="primary"
         dark
+        size="34px"
         v-bind="attrs"
         v-on="on"
       >

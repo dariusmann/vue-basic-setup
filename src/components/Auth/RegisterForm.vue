@@ -15,7 +15,7 @@
           text
           type="success"
         >
-          <div>{{$t('component.registerForm.message.registerSuccess')}}!</div>
+          <div v-html="$t('component.registerForm.message.registerSuccess', {here: loginLink})"></div>
         </v-alert>
         <v-alert
           v-show="showMessage.userAlreadyExists"
@@ -99,6 +99,11 @@ export default {
       }
     }
   },
+  computed: {
+    loginLink () {
+      return `<a href="/auth/login" class="LoginLink">${this.$i18n.t('text.here')}</a>`
+    }
+  },
   methods: {
     async register () {
       this.loading = true
@@ -128,6 +133,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+a.LoginLink {
+  text-decoration: underline;
+}
 </style>
