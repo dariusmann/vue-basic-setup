@@ -3,6 +3,7 @@
     <v-calendar
       :type="calendarType"
       :events="getEvents()"
+      :first-time="'09:00'"
       @click:event="showEvent"
     />
     <CalendarEventCard
