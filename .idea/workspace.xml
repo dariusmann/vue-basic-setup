@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8b5cf1-d4cc-441b-bfda-2aa50850e8a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/RegisterForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/RegisterForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Finder/Filter/FilterDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Finder/Filter/FilterDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.local" beforeDir="false" afterPath="$PROJECT_DIR$/env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
