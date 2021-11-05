@@ -1,13 +1,13 @@
 <template>
   <v-menu
-    v-model="selectedOpen"
-    :close-on-content-click="false"
-    :activator="selectedElement"
-    offset-x
+      v-model="selectedOpen"
+      :close-on-content-click="false"
+      :activator="selectedElement"
+      offset-x
   >
     <v-card
-      color="teal"
-      flat
+        color="teal"
+        flat
     >
       <v-toolbar dark>
         <v-toolbar-title v-html="eventName"></v-toolbar-title>
@@ -21,13 +21,17 @@
             <b class="tw-underline">{{ $t('text.address') }}:</b>
             {{ selectedEvent.address }}
           </a>
+          <span>({{ $t('component.calendarEventCard.hint.clickAddress') }})</span>
         </p>
         <p>
+          <a :href="telegramLink" class="AddressLink" target="_blank">
           <v-btn icon>
             <v-icon>mdi-forum</v-icon>
           </v-btn>
           <b class="tw-underline">{{ $t('text.telegram') }}:</b>
-          <a :href="telegramLink" class="AddressLink" target="_blank"> @{{contact}}</a>
+            @{{ contact }}
+          </a>
+          <span>({{ $t('component.calendarEventCard.hint.clickContact') }})</span>
         </p>
         <p>
           <v-btn icon>
@@ -38,75 +42,75 @@
         </p>
         <p>
           <b class="tw-underline">{{ $t('text.format') }}:</b>
-          {{format}}
+          {{ format }}
         </p>
         <p>
           <b class="tw-underline">{{ $t('text.playerLevel') }}:</b>
-          {{playerLevel}}
+          {{ playerLevel }}
         </p>
         <p v-show="comment">
           <b class="tw-underline">{{ $t('text.comment') }}:</b>
-          {{comment}}
+          {{ comment }}
         </p>
         <p>
           <b class="tw-underline">{{ $t('text.fieldType') }}:</b>
-          {{fieldType}}
+          {{ fieldType }}
         </p>
         <div>
           <v-chip
-            class="ma-2"
-            color="pink"
-            label
-            text-color="white"
-            v-show="hasShower"
+              class="ma-2"
+              color="pink"
+              label
+              text-color="white"
+              v-show="hasShower"
           >
             <v-icon left>
               mdi-shower-head
             </v-icon>
-            {{$t('text.shower')}}
+            {{ $t('text.shower') }}
           </v-chip>
           <v-chip
-            class="ma-2"
-            color="blue"
-            label
-            text-color="white"
-            v-show="hasParking"
+              class="ma-2"
+              color="blue"
+              label
+              text-color="white"
+              v-show="hasParking"
           >
             <v-icon left>
               mdi-parking
             </v-icon>
-            {{$t('text.parking')}}
+            {{ $t('text.parking') }}
           </v-chip>
           <v-chip
-            class="ma-2"
-            color="orange"
-            label
-            text-color="white"
-            v-show="hasDressingRoom"
+              class="ma-2"
+              color="orange"
+              label
+              text-color="white"
+              v-show="hasDressingRoom"
           >
             <v-icon left>
               mdi-hanger
             </v-icon>
-            {{$t('text.dressingRoom')}}
+            {{ $t('text.dressingRoom') }}
           </v-chip>
           <v-chip
-            class="ma-2"
-            color="red"
-            label
-            text-color="white"
-            v-show="hasLocker"
+              class="ma-2"
+              color="red"
+              label
+              text-color="white"
+              v-show="hasLocker"
           >
             <v-icon left>
               mdi-locker
             </v-icon>
-            {{$t('text.locker')}}
+            {{ $t('text.locker') }}
           </v-chip>
         </div>
       </v-card-text>
       <v-card-actions>
         <v-btn
-          color="secondary"
-          @click="closeCard"
+            color="secondary"
+            @click="closeCard"
         >
           {{ $t('text.close') }}
         </v-btn>
@@ -135,6 +139,11 @@ export default {
     selectedOpen: {
       type: Boolean,
       required: true
+    }
+  },
+  data: function () {
+    return {
+      showTooltips: true
     }
   },
   computed: {

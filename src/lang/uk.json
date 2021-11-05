@@ -98,6 +98,12 @@
       "linkText": {
         "createGame": "Створити гру"
       }
+    },
+    "calendarEventCard": {
+      "hint": {
+        "clickAddress": "Натисніть на адресу!",
+        "clickContact": "Натисніть на контакт!"
+      }
     }
   },
   "view": {

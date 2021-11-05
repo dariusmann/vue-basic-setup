@@ -98,6 +98,12 @@
       "linkText": {
         "createGame": "Создать игру"
       }
+    },
+    "calendarEventCard": {
+      "hint": {
+        "clickAddress": "Нажмите на адрес!",
+        "clickContact": "Нажмите на контакт!"
+      }
     }
   },
   "view": {

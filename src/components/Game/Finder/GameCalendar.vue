@@ -14,7 +14,6 @@
     />
   </v-container>
 </template>
-
 <script>
 
 import CalendarEventCard from '@/components/Game/Finder/CalendarEventCard'

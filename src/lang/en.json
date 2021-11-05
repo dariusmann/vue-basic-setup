@@ -97,6 +97,12 @@
       "linkText": {
         "createGame": "Create game"
       }
+    },
+    "calendarEventCard": {
+      "hint": {
+        "clickAddress": "Click on the address!",
+        "clickContact": "Click on the contact!"
+      }
     }
   },
   "view": {
