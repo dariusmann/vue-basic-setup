@@ -75,6 +75,7 @@ export default {
       const open = () => {
         this.selectedEvent = event
         this.selectedElement = nativeEvent.target
+        this.trackOpenEvent()
         requestAnimationFrame(() => requestAnimationFrame(() => {
           this.selectedOpen = true
         }))
@@ -91,6 +92,13 @@ export default {
     },
     closeEvent () {
       this.selectedOpen = false
+    },
+    trackOpenEvent () {
+      this.$gtag.event('view_event_details', {
+        event_category: 'calendar',
+        event_label: this.selectedEvent.name,
+        value: null
+        })
     }
   }
 }

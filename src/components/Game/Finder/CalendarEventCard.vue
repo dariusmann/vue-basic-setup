@@ -14,7 +14,7 @@
       </v-toolbar>
       <v-card-text>
         <p>
-          <a :href="addressLink" target="_blank" class="AddressLink">
+          <a :href="addressLink" target="_blank" class="AddressLink" @click="trackClickAddress">
             <v-btn icon>
               <v-icon>mdi-map-marker</v-icon>
             </v-btn>
@@ -24,7 +24,7 @@
           <span>({{ $t('component.calendarEventCard.hint.clickAddress') }})</span>
         </p>
         <p>
-          <a :href="telegramLink" class="AddressLink" target="_blank">
+          <a :href="telegramLink" class="AddressLink" target="_blank" @click="trackClickContact">
           <v-btn icon>
             <v-icon>mdi-forum</v-icon>
           </v-btn>
@@ -207,6 +207,20 @@ export default {
           return GameFieldTypeLabels[key].label
         }
       }
+    },
+    trackClickAddress () {
+      this.$gtag.event('view_address', {
+        event_category: 'calendar_event',
+        event_label: 'google_maps',
+        value: null
+      })
+    },
+    trackClickContact () {
+      this.$gtag.event('message_contact', {
+        event_category: 'calendar_event',
+        event_label: 'telegram',
+        value: null
+      })
     }
   }
 }

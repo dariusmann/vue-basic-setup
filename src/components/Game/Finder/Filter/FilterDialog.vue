@@ -80,10 +80,26 @@ export default {
     async selectedGameFormats (formats) {
       await this.$store.dispatch('filter/updateGameFormats', { gameFormats: formats })
       this.$emit('change')
+      this.trackFormatChanged(formats)
     },
     async selectedPlayerLevels (levels) {
       await this.$store.dispatch('filter/updatePlayerLevels', { playerLevels: levels })
       this.$emit('change')
+      this.trackPlayerLevelChanged(levels)
+    },
+    trackFormatChanged (formats) {
+      this.$gtag.event('changed_game_formats', {
+        event_category: 'calendar_filter',
+        event_label: formats,
+        value: null
+      })
+    },
+    trackPlayerLevelChanged (levels) {
+      this.$gtag.event('changed_player_level', {
+        event_category: 'calendar_filter',
+        event_label: levels,
+        value: null
+      })
     }
   },
   computed: {

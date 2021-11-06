@@ -80,6 +80,7 @@ export default {
       try {
         await GameService.createGame(data)
         this.showMessage.createSuccess = true
+        this.trackCreateGame()
         window.scrollTo(0, 0)
       } catch (e) {
         if (e instanceof ToManyGameForUserException) {
@@ -92,6 +93,13 @@ export default {
       }
 
       this.loading = false
+    },
+    trackCreateGame () {
+      this.$gtag.event('create_game', {
+        event_category: 'games',
+        event_label: null,
+        value: null
+      })
     }
   }
 }

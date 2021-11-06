@@ -114,6 +114,7 @@ export default {
         try {
           await AuthService.registerUser(this.email, this.password)
           this.showMessage.registerSuccessful = true
+          this.trackRegister()
         } catch (e) {
           if (e instanceof UserAlreadyExists) {
             this.showMessage.userAlreadyExists = true
@@ -128,6 +129,13 @@ export default {
       this.showMessage.registerSuccessful = false
       this.showMessage.userAlreadyExists = false
       this.showMessage.unexpectedError = false
+    },
+    trackRegister () {
+      this.$gtag.event('register_completed', {
+        event_category: 'auth',
+        event_label: this.email,
+        value: null
+      })
     }
   }
 }

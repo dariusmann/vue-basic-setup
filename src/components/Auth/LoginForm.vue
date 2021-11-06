@@ -125,6 +125,7 @@ export default {
         try {
           await AuthService.loginUser(this.email, this.password)
           this.showMessage.successfulLogin = true
+          this.trackLogin()
           setTimeout(() => {
             this.$router.push({ name: 'GameCreate' })
           }, 1000)
@@ -146,6 +147,13 @@ export default {
       this.showMessage.userNotFound = false
       this.showMessage.passwordIncorrect = false
       this.showMessage.unexpectedError = false
+    },
+    trackLogin () {
+      this.$gtag.event('login_completed', {
+        event_category: 'auth',
+        event_label: this.email,
+        value: null
+      })
     }
   }
 }

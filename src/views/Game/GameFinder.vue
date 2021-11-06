@@ -66,6 +66,7 @@ export default {
   methods: {
     change: async function () {
       await this.fetchGames()
+      this.trackChangeCalendarView()
     },
     filterChange: async function () {
       await this.fetchGames()
@@ -87,6 +88,13 @@ export default {
 
         this.games = await GameService.readGames(GameTypes.Soccer, from, to)
       }
+    },
+    trackChangeCalendarView () {
+      this.$gtag.event('change_calendar_type', {
+        event_category: 'calendar',
+        event_label: this.selectedCalendar.value,
+        value: null
+      })
     }
   }
 }
