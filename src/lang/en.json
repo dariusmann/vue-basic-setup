@@ -117,7 +117,8 @@
       "gameFinder": {
         "header": "Find you game",
         "nextFourDays": "Next 4 days",
-        "calendarView": "Calendar view"
+        "calendarView": "Calendar view",
+        "infoAlert": "Click on the events in the calendar to see the details of the games."
       }
     },
     "auth": {

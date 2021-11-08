@@ -26,6 +26,16 @@
         <FilterLabelContainer @removed="filterRemoved"/>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col>
+        <v-alert
+          color="indigo"
+          dark
+        >
+          {{$t('view.game.gameFinder.infoAlert')}}
+        </v-alert>
+      </v-col>
+    </v-row>
     <GameCalendar :games="games" :calendar-type="selectedCalendar.value"/>
   </v-container>
 </template>
